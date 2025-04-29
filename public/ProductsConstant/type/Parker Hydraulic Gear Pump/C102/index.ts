@@ -1,4 +1,5 @@
 const C102 = {
+  name: 'C102',
   model: 'C102-25',
   ratedRpm: '1800',
   ratedVolumeOfFlow: '100.5cc/rev',

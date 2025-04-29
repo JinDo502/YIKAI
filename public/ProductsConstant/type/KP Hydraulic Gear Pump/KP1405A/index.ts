@@ -1,4 +1,5 @@
 const KP1405A = {
+  name: 'KP1405A',
   model: 'KP1405A',
   ratedRpm: '1000',
   ratedVolumeOfFlow: '140cc/rev',

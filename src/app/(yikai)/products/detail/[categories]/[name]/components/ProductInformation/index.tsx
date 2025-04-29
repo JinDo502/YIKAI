@@ -8,7 +8,7 @@ interface InfoProps {
 const ProductInformation = (props: InfoProps) => {
   const { data } = props;
 
-  const keys = Object.keys(data)?.filter((key) => key != 'images');
+  const keys = Object.keys(data)?.filter((key) => key != 'images' && key != 'name');
 
   const afterClass = 'after:absolute after:bottom-0 after:left-0 after:block after:h-1 after:w-full after:bg-[var(--accent)]';
 

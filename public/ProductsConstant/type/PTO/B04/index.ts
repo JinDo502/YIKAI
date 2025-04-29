@@ -1,14 +1,13 @@
 const B04 = {
-  name: 'OPT B04',
-  'P/O': 'B04',
-  model: 'EATON / FULLER RT 11609',
-  REMARKS: ' I-RT11609-8HH-28-28/15',
-  'number of teeth': '28T',
-  'applicable models': 'ISUZU, HINO',
+  model: 'B04 / EATON  RT11609',
+  remarks: 'I-RT11609-8HH-28-28/15',
+  'mumber of teeth': '28T',
+  'applicable models': 'ISUZU,HINO',
   images: {
-    main: '/ProductsConstant/type/PTO/B01/main.jpg',
-    secondary1: '/ProductsConstant/type/PTO/B01/secondary1.png',
+    main: ['/ProductsConstant/type/PTO/B04/PTOB04-a.jpg', '/ProductsConstant/type/PTO/B04/PTOB04-b.jpg'],
+    secondary: ['/ProductsConstant/type/PTO/B04/secondary1.jpg', '/ProductsConstant/type/PTO/B04/secondary2.jpg'],
   },
+  name: 'B04',
 };
 
 export default B04;

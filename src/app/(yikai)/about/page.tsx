@@ -16,7 +16,6 @@ const About = () => {
   return (
     <div className='bg-white'>
       <PageBanner src='/images/about/header.jpg' alt='About' title='About' />
-
       <div className='max-w-7xl mx-auto py-15'>
         <YKTrade />
         <Achievements />

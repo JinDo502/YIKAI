@@ -1,4 +1,5 @@
 const KP45A = {
+  name: 'KP45A',
   model: 'KP45A',
   ratedRpm: '1000',
   ratedVolumeOfFlow: '45cc/rev',
@@ -8,7 +9,7 @@ const KP45A = {
   packageSize: '325mm*215mm*230mm',
   images: {
     main: ['/ProductsConstant/type/KP Hydraulic Gear Pump/KPC45A/main.png'],
-    secondary: ['/ProductsConstant/type/KP Hydraulic Gear Pump/KPC45A/secondary1.png','/ProductsConstant/type/KP Hydraulic Gear Pump/KPC45A/secondary2.png'],
+    secondary: ['/ProductsConstant/type/KP Hydraulic Gear Pump/KPC45A/secondary1.png', '/ProductsConstant/type/KP Hydraulic Gear Pump/KPC45A/secondary2.png'],
   },
 };
 

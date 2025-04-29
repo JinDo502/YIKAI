@@ -1,4 +1,5 @@
 const KP1505AR = {
+  name: 'KP1505AR',
   model: 'KP1505AR',
   ratedRpm: '1000',
   ratedVolumeOfFlow: '150cc/rev',
@@ -8,7 +9,7 @@ const KP1505AR = {
   packageSize: '345mm*300mm*230mm',
   images: {
     main: ['/ProductsConstant/type/KP Hydraulic Gear Pump/KP1505AR/main.png'],
-    secondary: ['/ProductsConstant/type/KP Hydraulic Gear Pump/KP1505AR/secondary1.png','/ProductsConstant/type/KP Hydraulic Gear Pump/KP1505AR/secondary2.png'],
+    secondary: ['/ProductsConstant/type/KP Hydraulic Gear Pump/KP1505AR/secondary1.png', '/ProductsConstant/type/KP Hydraulic Gear Pump/KP1505AR/secondary2.png'],
   },
 };
 

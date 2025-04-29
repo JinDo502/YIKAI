@@ -1,4 +1,5 @@
 const KP75C = {
+  name: 'KP75C',
   model: 'KP75C',
   ratedRpm: '1000',
   ratedVolumeOfFlow: '75cc/rev',
