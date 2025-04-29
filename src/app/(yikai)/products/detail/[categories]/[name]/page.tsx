@@ -1,9 +1,9 @@
 // 产品详情页
 
 import productsMap from '@/public/ProductsConstant/type';
-import Image from 'next/image';
 import ProductDetailSwiper from './components/ProductDetailSwiper';
 import ProductInformation from './components/ProductInformation';
+import PageBanner from '@/components/PageBanner';
 type productType = keyof typeof productsMap;
 
 export async function generateStaticParams() {
@@ -38,9 +38,7 @@ const ProductDetail = async ({ params }: ProductDetailProps) => {
 
   return (
     <div className='bg-white'>
-      <div className='relative w-full h-[369px]'>
-        <Image src={'/images/product/header.png'} alt='about' fill priority className='object-cover' />
-      </div>
+      <PageBanner src='/images/product/header.jpg' alt={`${categories}-${name}`} title={name.toLocaleUpperCase()} />
       <div className='grid grid-cols-12 gap-4 max-w-7xl mx-auto'>
         <div className='col-span-8'>
           <ProductDetailSwiper images={data?.images?.main?.map((image) => ({ name: image, image: image })) || []} />

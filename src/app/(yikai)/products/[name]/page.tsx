@@ -1,7 +1,7 @@
-import Image from 'next/image';
 import Menu from './components/Menu';
 import { menu } from '@/public/ProductsConstant/menu';
 import List from './components/List';
+import PageBanner from '@/components/PageBanner';
 
 export async function generateStaticParams() {
   return menu.map((item) => ({ name: item.name }));
@@ -27,9 +27,7 @@ const Product = async ({ params }: ProductProps) => {
 
   return (
     <div className='bg-white'>
-      <div className='relative w-full h-[369px]'>
-        <Image src={'/images/product/header.png'} alt='about' fill priority className='object-cover' />
-      </div>
+      <PageBanner src='/images/product/header.jpg' alt='Products' title='Products' />
       <div className='max-w-7xl mx-auto py-15 flex gap-10'>
         <Menu selected={selectType} />
 
