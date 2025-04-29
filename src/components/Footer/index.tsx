@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { menu } from '@/public/ProductsConstant/menu';
 
 const usefulLinks = [
   {
@@ -10,62 +11,28 @@ const usefulLinks = [
     href: '/about',
   },
   {
-    name: 'Solution',
-    href: '/solution',
+    name: 'Product',
+    href: '/products',
   },
   {
-    name: 'Terms of service',
-    href: '/terms-of-service',
-  },
-  {
-    name: 'Privacy policy',
-    href: '/privacy-policy',
+    name: 'Contact',
+    href: '/contact',
   },
 ];
 
-const ourProduct = [
-  {
-    name: 'Hydraulic Cylinders',
-    href: '/hydraulic-cylinders',
-  },
-  {
-    name: 'Internal Gear Pumps',
-    href: '/internal-gear-pumps',
-  },
-  {
-    name: 'Parker Pumps',
-    href: '/parker-pumps',
-  },
-  {
-    name: 'Gear Pumps',
-    href: '/gear-pumps',
-  },
-  {
-    name: 'PTO',
-    href: '/pto',
-  },
-  {
-    name: 'Hoist Frames',
-    href: '/hoist-frames',
-  },
-];
+const ourProduct = menu.map((item) => ({
+  name: item.name,
+  href: `/products/${item.name}`,
+}));
 
 const company = [
   {
-    name: 'Join Us',
-    href: '/join-us',
-  },
-  {
-    name: 'Blog',
-    href: '/blog',
-  },
-  {
     name: 'Contact Us',
-    href: '/contact-us',
+    href: '/contact',
   },
   {
     name: 'Whatsapp',
-    href: '/whatsapp',
+    href: 'https://wa.me/qr/CWI4YYBHJBBHC1',
   },
   {
     name: 'Facebook',
@@ -73,23 +40,11 @@ const company = [
   },
 ];
 
-const socialLinks = [
-  {
-    name: 'Twitter',
-    icon: 'bi-twitter-x',
-  },
-  {
-    name: 'Facebook',
-    icon: 'bi-facebook',
-  },
-  {
-    name: 'Instagram',
-    icon: 'bi-instagram',
-  },
-  {
-    name: 'Linkedin',
-    icon: 'bi-linkedin',
-  },
+const socialLinks: { name: string; icon: string; href?: string }[] = [
+  { name: 'Twitter', icon: 'bi-twitter-x' },
+  { name: 'Facebook', icon: 'bi-facebook' },
+  { name: 'Whatsapp', icon: 'bi-whatsapp', href: 'https://wa.me/qr/CWI4YYBHJBBHC1' },
+  { name: 'Linkedin', icon: 'bi-linkedin' },
 ];
 
 const Footer = () => {
@@ -102,21 +57,24 @@ const Footer = () => {
               <Link href='/home'>
                 <div className='font-[700] text-3xl mb-6'>YIKAI</div>
               </Link>
+
               <div className='text-sm mt-3'>
-                <p className='mb-1'>A108 Adam Street</p>
-                <p className='mb-1'>New York, NY 535022</p>
+                <p className='mb-1'>Tel&Whatsapp ：+86 13906503693</p>
+                <p className='mb-1'>Email ：newright_hpp@163.com</p>
                 <p className='mt-3 mb-1'>
-                  <strong>Phone:</strong> <span>+1 5589 55488 55</span>
+                  <strong>Office address:</strong> <span>No.5 Xingxing Road,Lin ping District,Hangzhou City,Zhejiang Province,China</span>
                 </p>
                 <p className='mb-1'>
-                  <strong>Email:</strong> <span>info@example.com</span>
+                  <strong>Factory address:</strong> <span>Hongqiao Industry ,Huzhou City, Zhejiang Province,China</span>
                 </p>
               </div>
               <div className='flex mt-6 gap-4'>
                 {socialLinks.map((item) => (
                   <a
                     key={item.name}
-                    href=''
+                    href={item?.href}
+                    target='_blank'
+                    aria-disabled={!item?.href}
                     className='flex items-center justify-center w-10 h-10 rounded-md border border-white/80 text-2xl text-white/80 transition-all duration-300 hover:text-[var(--accent)] hover:border-[var(--accent)]'
                   >
                     <i className={`${item.icon} text-base`}></i>
@@ -126,7 +84,7 @@ const Footer = () => {
             </div>
 
             <div className='col-span-2'>
-              <h4 className='text-base font-roboto font-bold pb-3'>Useful Links</h4>
+              <h4 className='text-base font-roboto font-bold pb-3'>Navigation links</h4>
               <ul className='mt-3'>
                 {usefulLinks.map((link) => (
                   <li key={link.name} className='pb-2.5'>

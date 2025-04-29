@@ -1,9 +1,9 @@
 const menu = {
   home: 'HOME',
   about: 'ABOUT',
-  product: 'PRODUCT',
+  products: 'PRODUCTS',
   contact: 'CONTACT',
   languages: 'LANGUAGES',
-}
+};
 
-export default menu
+export default menu;

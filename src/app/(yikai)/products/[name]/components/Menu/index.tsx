@@ -1,0 +1,31 @@
+import Link from 'next/link';
+import { menu } from '@/public/ProductsConstant/menu';
+
+interface MenuProps {
+  selected: string;
+}
+
+const Menu = ({ selected }: MenuProps) => {
+  return (
+    <div className='flex gap-4 flex-col bg-[var(--default)]/3 rounded-lg'>
+      <div className='text-2xl font-bold text-[var(--heading)] border-b border-[var(--default)]/5 p-5'>Categories</div>
+      <div className='flex flex-col space-y-2 divide-y divide-[var(--default)]/5 px-5'>
+        {menu.map((item) => {
+          const isActive = selected === item.name;
+          const href = `/products/${item.name}`;
+          const isActiveClass = isActive ? 'text-[var(--accent)] bg-[var(--default)]/5 scale-105 border-b-width-0 font-bold' : 'text-[var(--default)] font-medium';
+          const hoverClass = 'hover:text-[var(--accent)] hover:bg-[var(--default)]/5 hover:scale-105';
+          return (
+            <Link key={item.name} href={href}>
+              <div className={`${isActiveClass} p-3 mb-2 rounded-lg relative ${hoverClass}`}>
+                <span className=''>{item.name}</span>
+              </div>
+            </Link>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+export default Menu;

@@ -1,0 +1,56 @@
+import ContentCard from '@/components/ContentCard';
+import Image from 'next/image';
+
+const iconBoxes = [
+  {
+    icon: 'bi bi-easel',
+    title: 'Strategic partnerships with 20+ leading enterprises globally',
+  },
+  {
+    icon: 'bi bi-patch-check',
+    title: 'Delivered 3000+ specialized cylinders for Vietnam port automation projects',
+  },
+  {
+    icon: 'bi bi-brightness-high',
+    title: 'Annual supply exceeding 20,000 sets for Saudi Arabian mining equipment',
+  },
+  {
+    icon: 'bi bi-brightness-high',
+    title: 'German TÜV certified 100,000 hours safe operation record for hydraulic systems',
+  },
+];
+
+const StrategicAchievementsContent = () => {
+  return (
+    <div className='grid grid-cols-2 gap-8'>
+      {iconBoxes.map((item) => {
+        return (
+          <div key={item.icon + item.title} className='flex gap-4 items-start'>
+            <i className={`${item.icon} text-2xl text-[var(--accent)] pt-4`} />
+            <div className='flex-1'>
+              <p className='text-sm mt-2'>{item.title}</p>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
+const StrategicAchievements = () => {
+  return (
+    <ContentCard
+      title='Strategic Achievements'
+      titlePosition='left'
+      subTitle='Over the years, with strong production capabilities and excellent service, Zhejiang YIKAI Import and Export Co., Ltd. has established long-term stable partnerships with numerous renowned engineering machinery enterprises both domestically and internationally. By optimizing the supply chain system, we achieve efficient product supply and effective cost control, winning market recognition with high-quality products and competitive prices.'
+      content={<StrategicAchievementsContent />}
+      rightContent={
+        <div className='relative w-full h-full'>
+          <Image src='/images/about/about2.png' alt='Strategic Achievements' fill className='object-cover' sizes='(max-width: 768px) 100vw, 50vw' />
+        </div>
+      }
+    />
+  );
+};
+
+export default StrategicAchievements;

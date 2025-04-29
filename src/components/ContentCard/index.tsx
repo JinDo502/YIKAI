@@ -1,0 +1,53 @@
+interface ContentCardProps {
+  // 标题
+  title: string | React.ReactNode;
+  // 副标题
+  subTitle?: string;
+  // 标题位置
+  titlePosition?: 'left' | 'center' | 'right';
+  // 背景颜色
+  backgroundColor?: string;
+  // 内容
+  content: React.ReactNode;
+  // 右侧图片
+  rightContent?: React.ReactNode;
+  // 左侧图片
+  leftContent?: React.ReactNode;
+  // 图片类名
+  imageClassName?: string;
+}
+
+const ContentCard = (props: ContentCardProps) => {
+  const { title, subTitle, titlePosition = 'center', backgroundColor = '#fff', content, rightContent, leftContent } = props;
+
+  const handleTitlePosition = (titlePosition: ContentCardProps['titlePosition']) => {
+    switch (titlePosition) {
+      case 'left':
+      case 'right':
+        return 'pb-5 after:block after:w-[80px] after:h-[4px] after:bg-[var(--accent)] after:absolute after:bottom-0 after:left-0';
+      case 'center':
+        return ` leading-none 
+       after:block after:w-[50px] after:h-[2px] after:bg-[var(--accent)] after:absolute after:top-1/2 after:right-0 after:translate-x-[60px] after:-translate-y-1/2 
+      before:block before:w-[50px] before:h-[2px] before:bg-[var(--accent)] before:absolute before:top-1/2 before:left-0 before:-translate-x-[60px] before:-translate-y-1/2
+        `;
+    }
+  };
+
+  return (
+    <div style={{ backgroundColor: `${backgroundColor}` }}>
+      <div className='w-full h-full max-w-7xl m-auto py-15 grid grid-cols-1 md:grid-cols-2 gap-8'>
+        {titlePosition === 'right' && leftContent && <div className='col-span-1 h-full min-h-[400px] relative'>{leftContent}</div>}
+        <div className={`px-3 col-span-${titlePosition !== 'center' ? '1' : '2'}`}>
+          <div className={`pb-15 flex flex-col items-${titlePosition} justify-center font-roboto`}>
+            <h2 className={`relative text-3xl font-bold text-[var(--heading)] ${handleTitlePosition(titlePosition)}`}>{title}</h2>
+            {subTitle && <h3 className='mt-2 text-base text-[var(--default)]'>{subTitle}</h3>}
+          </div>
+          {content}
+        </div>
+        {titlePosition === 'left' && rightContent && <div className='col-span-1 h-full min-h-[400px] relative'>{rightContent}</div>}
+      </div>
+    </div>
+  );
+};
+
+export default ContentCard;
