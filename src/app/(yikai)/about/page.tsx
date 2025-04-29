@@ -9,7 +9,7 @@ const About = () => {
   return (
     <div className='bg-white'>
       <div className='relative w-full h-[369px]'>
-        <Image src={'/images/about/header.png'} alt='about' fill className='object-cover' />
+        <Image src={'/images/about/header.png'} alt='about' priority fill className='object-cover' />
       </div>
       <div className='max-w-7xl mx-auto py-15'>
         <YKTrade />

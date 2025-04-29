@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <div className='bg-white'>
       <div className='relative w-full h-[369px]'>
-        <Image src={'/images/contact/header.png'} alt='about' fill className='object-cover' />
+        <Image src={'/images/contact/header.png'} alt='about' fill priority className='object-cover' />
       </div>
       <div className='max-w-7xl mx-auto py-15 space-y-10'>
         <Info />

@@ -19,7 +19,7 @@ const Product = async ({ params }: ProductProps) => {
   return (
     <div className='bg-white'>
       <div className='relative w-full h-[369px]'>
-        <Image src={'/images/product/header.png'} alt='about' fill className='object-cover' />
+        <Image src={'/images/product/header.png'} alt='about' fill priority className='object-cover' />
       </div>
       <div className='max-w-7xl mx-auto py-15 flex gap-10'>
         <Menu selected={selectType} />

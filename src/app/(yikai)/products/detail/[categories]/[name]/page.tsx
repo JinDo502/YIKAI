@@ -30,7 +30,7 @@ const ProductDetail = async ({ params }: ProductDetailProps) => {
   return (
     <div className='bg-white'>
       <div className='relative w-full h-[369px]'>
-        <Image src={'/images/product/header.png'} alt='about' fill className='object-cover' />
+        <Image src={'/images/product/header.png'} alt='about' fill priority className='object-cover' />
       </div>
       <div className='grid grid-cols-12 gap-4 max-w-7xl mx-auto'>
         <div className='col-span-8'>
