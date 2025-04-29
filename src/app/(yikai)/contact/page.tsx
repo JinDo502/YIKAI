@@ -2,6 +2,13 @@ import Image from 'next/image';
 import Info from './components/info';
 import Map from './components/map';
 
+export async function generateMetadata() {
+  return {
+    title: 'YIKAI-Contact',
+    description: 'Contact YIKAI',
+  };
+}
+
 const Contact = () => {
   return (
     <div className='bg-white'>

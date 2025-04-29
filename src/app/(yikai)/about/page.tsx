@@ -5,6 +5,13 @@ import ServiceEcosystem from './components/ServiceEcosystem';
 import StrategicAchievements from './components/StrategicAchievements';
 import ExhibitionShowcasing from './components/ExhibitionShowcasing';
 
+export async function generateMetadata() {
+  return {
+    title: 'YIKAI-About',
+    description: 'About YIKAI',
+  };
+}
+
 const About = () => {
   return (
     <div className='bg-white'>

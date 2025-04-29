@@ -11,6 +11,15 @@ interface ProductProps {
   params: Promise<{ name: string }>;
 }
 
+export async function generateMetadata({ params }: ProductProps) {
+  const { name } = await params;
+  const selectType = decodeURIComponent(name);
+  return {
+    title: `YIKAI-${selectType}`,
+    description: `YIKAI-${selectType}`,
+  };
+}
+
 const Product = async ({ params }: ProductProps) => {
   const { name } = await params;
   // url解码

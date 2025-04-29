@@ -20,6 +20,15 @@ interface ProductDetailProps {
   params: Promise<{ name: string; categories: string }>;
 }
 
+export async function generateMetadata({ params }: ProductDetailProps) {
+  const { name, categories: _categories } = await params;
+  const categories = decodeURIComponent(_categories) as productType;
+  return {
+    title: `YIKAI-${name}`,
+    description: `YIKAI-${categories}-${name}`,
+  };
+}
+
 const ProductDetail = async ({ params }: ProductDetailProps) => {
   const { name, categories: _categories } = await params;
 
