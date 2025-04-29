@@ -8,8 +8,8 @@ const KP75C = {
   weight: '21KG',
   packageSize: '260mm*210mm*240mm',
   images: {
-    main: ['/ProductsConstant/type/KP Hydraulic Gear Pump/KP75A-C/main.png'],
-    secondary: ['/ProductsConstant/type/KP Hydraulic Gear Pump/KP75A-C/secondary1.png', '/ProductsConstant/type/KP Hydraulic Gear Pump/KP75A-C/secondary2.png'],
+    main: ['/ProductsConstant/type/KP Hydraulic Gear Pump/KP75C/main.png'],
+    secondary: ['/ProductsConstant/type/KP Hydraulic Gear Pump/KP75C/secondary1.png', '/ProductsConstant/type/KP Hydraulic Gear Pump/KP75C/secondary2.png'],
   },
 };
 
