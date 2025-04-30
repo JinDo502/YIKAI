@@ -5,7 +5,7 @@ const B04 = {
   'applicable models': 'ISUZU,HINO',
   images: {
     main: ['/ProductsConstant/type/PTO/B04/PTOB04-a.jpg', '/ProductsConstant/type/PTO/B04/PTOB04-b.jpg'],
-    secondary: ['/ProductsConstant/type/PTO/B04/secondary1.jpg', '/ProductsConstant/type/PTO/B04/secondary2.jpg'],
+    secondary: ['/ProductsConstant/type/PTO/B04/secondary1.jpg'],
   },
   name: 'B04',
 };

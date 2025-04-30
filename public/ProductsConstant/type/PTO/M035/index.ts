@@ -5,7 +5,7 @@ const M035 = {
   'applicable models': 'MITSUBISHI',
   images: {
     main: ['/ProductsConstant/type/PTO/M035/PTOM035-a.jpg', '/ProductsConstant/type/PTO/M035/PTOM035-b.jpg'],
-    secondary: ['/ProductsConstant/type/PTO/M035/secondary1.jpg', '/ProductsConstant/type/PTO/M035/secondary2.jpg'],
+    secondary: ['/ProductsConstant/type/PTO/M035/secondary1.jpg'],
   },
   name: 'M035',
 };

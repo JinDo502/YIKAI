@@ -5,7 +5,7 @@ const MYY = {
   'applicable models': 'ISUZU',
   images: {
     main: ['/ProductsConstant/type/PTO/MYY/PTOMYYA-a.jpg', '/ProductsConstant/type/PTO/MYY/PTOMYYA-b.jpg'],
-    secondary: ['/ProductsConstant/type/PTO/MYY/secondary1.jpg', '/ProductsConstant/type/PTO/MYY/secondary2.jpg'],
+    secondary: ['/ProductsConstant/type/PTO/MYY/secondary1.jpg'],
   },
   name: 'MYY',
 };
