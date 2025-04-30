@@ -14,7 +14,9 @@ function ImagePreview({ image }: { image: string }) {
       }}
     >
       <PhotoView src={image}>
-        <Image src={image} width={800} height={600} alt='' className='object-cover' />
+        <div className='w-full h-full flex items-center justify-center'>
+          <Image src={image} width={800} height={600} alt='' className='object-cover' />
+        </div>
       </PhotoView>
     </PhotoProvider>
   );

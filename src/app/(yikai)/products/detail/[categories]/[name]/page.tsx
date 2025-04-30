@@ -37,6 +37,8 @@ const ProductDetail = async ({ params }: ProductDetailProps) => {
 
   const data = productsMap[categories]?.find((item) => item?.name === name);
 
+  const colSpan = `col-span-${data?.images?.secondary?.length && data?.images?.secondary?.length > 1 ? '6' : '12'}`;
+
   return (
     <div className='bg-white'>
       <PageBanner src='/images/product/header.jpg' alt={`${categories}-${name}`} title={name.toLocaleUpperCase()} />
@@ -53,7 +55,7 @@ const ProductDetail = async ({ params }: ProductDetailProps) => {
         {data && data.images.secondary.length > 0 && (
           <div className='grid grid-cols-12 gap-4'>
             {data?.images?.secondary?.map((item) => (
-              <div key={item} className='col-span-6 shadow-[0_2px_30px_rgba(0,0,0,0.1)] flex items-center'>
+              <div key={item} className={`${colSpan} shadow-[0_2px_30px_rgba(0,0,0,0.1)] flex items-center`}>
                 <ImagePreview image={item} />
               </div>
             ))}
