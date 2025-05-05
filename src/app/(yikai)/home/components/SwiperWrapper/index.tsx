@@ -6,49 +6,38 @@ import Image from 'next/image';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import ContentCard from '@/components/ContentCard';
-
-interface Product {
-  name: string;
-  image: string;
-}
-
-const products: Product[] = [
-  { name: 'Hoist Frames', image: '/images/slider/1.jpg' },
-  { name: 'Internal Parts', image: '/images/slider/2.jpg' },
-  { name: 'Power Take-Off', image: '/images/slider/3.jpg' },
-  { name: 'Parker Pumps', image: '/images/slider/4.jpg' },
-  { name: 'Gear Pumps', image: '/images/slider/5.jpg' },
-];
+import topCategories from '@/public/HomeConstant/Top Categories';
+import Link from 'next/link';
 
 const ProductSwiperContent = () => {
   return (
     <div className='w-full px-4 py-8 relative'>
-      <div className='swiper-container'>
+      <div>
         <Swiper
           loop
           speed={600}
           slidesPerView='auto'
           modules={[Pagination, Autoplay]}
           spaceBetween={30}
-          pagination={{
-            clickable: true,
-          }}
+          pagination={{ clickable: true }}
           autoplay={{ delay: 2000 }}
           breakpoints={{
             768: { slidesPerView: 4, spaceBetween: 20 },
             0: { slidesPerView: 1, spaceBetween: 10 },
           }}
         >
-          {products.map((product) => (
+          {topCategories.map((product) => (
             <SwiperSlide key={product.name}>
-              <div className='bg-surface rounded-lg overflow-hidden relative group cursor-pointer'>
-                <div className='relative w-full transition-transform duration-300 group-hover:scale-110'>
-                  <Image src={product.image} alt={product.name} className='object-cover w-full h-auto' width={400} height={300} sizes='(max-width: 768px) 100vw, 25vw' />
+              <Link href={product.url}>
+                <div className='bg-surface rounded-lg overflow-hidden relative group cursor-pointer aspect-square'>
+                  <div className='relative w-full h-full transition-transform duration-300 group-hover:scale-110'>
+                    <Image src={product.image} alt={product.name} className='object-contain w-full h-full' width={400} height={400} sizes='(max-width: 768px) 100vw, 25vw' />
+                  </div>
+                  <div className='opacity-0 group-hover:opacity-100 transition-all duration-300 absolute inset-0 bg-black/50 flex flex-col justify-end p-4'>
+                    <h3 className='text-center m-auto text-[var(--accent)] text-2xl font-bold'>{product.name}</h3>
+                  </div>
                 </div>
-                <div className='opacity-0 group-hover:opacity-100 transition-all duration-300 absolute inset-0 bg-black/50 flex flex-col justify-end p-4'>
-                  <h3 className='text-center m-auto text-[var(--accent)] text-2xl font-bold'>{product.name}</h3>
-                </div>
-              </div>
+              </Link>
             </SwiperSlide>
           ))}
         </Swiper>
