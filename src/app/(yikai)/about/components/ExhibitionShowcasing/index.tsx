@@ -4,27 +4,22 @@ import Image from 'next/image';
 const iconBoxes = [
   {
     title: 'INAPA',
-    subTitle: 'Exhibition 2023',
     image: '/images/exhibition-showcasing/INAPA.jpg',
   },
   {
     title: 'M-Tech Tokyo',
-    subTitle: 'Exhibition 2023',
     image: '/images/exhibition-showcasing/M-Tech Tokyo.png',
   },
   {
     title: 'Canton Fair',
-    subTitle: 'Exhibition 2023',
     image: '/images/exhibition-showcasing/Canton Fair.png',
   },
   {
     title: 'bauma China',
-    subTitle: 'Exhibition 2023',
     image: '/images/exhibition-showcasing/bauma China.png',
   },
   {
     title: 'Automechanika Shanghai',
-    subTitle: 'Exhibition 2023',
     image: '/images/exhibition-showcasing/Automechanika Shanghai.png',
   },
 ];
@@ -40,7 +35,6 @@ const ExhibitionShowcasingContent = () => {
             </div>
             <div className='flex flex-col gap-2 items-center'>
               <h4 className='text-xl font-bold text-[var(--heading)]'>{item.title}</h4>
-              <span className='text-sm font-bold text-[var(--heading)]/70 italic'>{item.subTitle}</span>
             </div>
           </div>
         );

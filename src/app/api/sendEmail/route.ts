@@ -1,24 +1,21 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
+import { MailOptions } from 'nodemailer/lib/sendmail-transport';
+import SendgridTransport from 'nodemailer-sendgrid';
 
 export async function POST(request: Request) {
   const { subject, message } = await request.json();
 
-  // 配置 Nodemailer
-  const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: Number(process.env.SMTP_PORT),
-    secure: process.env.SMTP_PORT === '465', // 465 使用 SSL，587 使用 STARTTLS
-    auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASS,
-    },
-  });
+  const transporter = nodemailer.createTransport(
+    SendgridTransport({
+      apiKey: process.env.SENDGRID_API_KEY,
+    })
+  );
 
   // 邮件内容
-  const mailOptions = {
+  const mailOptions: MailOptions = {
     from: `YourApp <no-reply@yikai.global>`,
-    to: 'newright_hpp@163.com',
+    to,
     subject,
     text: message,
   };

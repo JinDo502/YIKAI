@@ -22,7 +22,7 @@ const ProductDetailSwiper = (props: ProductSwiperProps) => {
 
   return (
     <div className='w-full px-4 py-8 relative'>
-      <div className='swiper-container'>
+      <div className='shadow-xl'>
         <Swiper
           loop={!isSingleProduct}
           speed={600}

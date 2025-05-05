@@ -31,9 +31,11 @@ export async function generateMetadata({ params }: ProductDetailProps) {
 }
 
 const ProductDetail = async ({ params }: ProductDetailProps) => {
-  const { name, categories: _categories } = await params;
+  const { name: _name, categories: _categories } = await params;
 
   const categories = decodeURIComponent(_categories) as productType;
+
+  const name = decodeURIComponent(_name);
 
   const data = productsMap[categories]?.find((item) => item?.name === name);
 
@@ -41,14 +43,14 @@ const ProductDetail = async ({ params }: ProductDetailProps) => {
 
   return (
     <div className='bg-white'>
-      <PageBanner src='/images/product/header.jpg' alt={`${categories}-${name}`} title={name.toLocaleUpperCase()} />
+      <PageBanner src='/images/product/header.jpg' alt={`${categories}-${name}`} title='Products' />
       <div className='flex flex-col gap-4 py-15 max-w-7xl mx-auto'>
-        <div className='grid grid-cols-12 gap-4 flex items-center'>
+        <div className='grid grid-cols-12 gap-4 flex items-cneter'>
           <div className='col-span-8'>
             <ProductDetailSwiper images={data?.images?.main?.map((image) => ({ name: image, image: image })) || []} />
           </div>
-          <div className='col-span-4 '>
-            <ProductInformation data={data} />
+          <div className='col-span-4'>
+            <ProductInformation data={data} categories={categories} />
           </div>
         </div>
 

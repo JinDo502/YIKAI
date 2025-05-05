@@ -17,7 +17,7 @@ const PageBanner = (props: Props) => {
   const textTransformClass = 'transform translate-x-1.5 translate-y-1.5';
 
   return (
-    <div className={`relative w-full h-[30vh] relative`}>
+    <div className={`relative w-full h-[30vh]`}>
       <Image src={src} alt={alt} fill priority className='object-cover' />
       {title && (
         <div className={positionBaseClass}>
