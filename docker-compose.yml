@@ -12,6 +12,12 @@ services:
     environment:
       - NODE_ENV=production
       - PORT=3000
+      # SMTP 配置（以 QQ 邮箱为例）
+      - SMTP_HOST=smtp.qq.com
+      - SMTP_PORT=465
+      - SMTP_USER=571839175@qq.com
+      - SMTP_PASSWORD=gtofknazhxlqbddd
+      - SMTP_FROM=no-reply@yikai.global
 
   nginx:
     image: nginx:alpine
