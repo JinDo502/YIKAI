@@ -13,11 +13,11 @@ services:
       - NODE_ENV=production
       - PORT=3000
       # SMTP 配置（以 QQ 邮箱为例）
-      - SMTP_HOST=smtp.qq.com
+      - SMTP_HOST=smtp.qiye.aliyun.com
       - SMTP_PORT=465
-      - SMTP_USER=571839175@qq.com
-      - SMTP_PASSWORD=gtofknazhxlqbddd
-      - SMTP_FROM=571839175@qq.com
+      - SMTP_USER=WYC@ZHEJIANGYIKAI.COM
+      - SMTP_PASSWORD=tRdNxpztAhowxX7c
+      - SMTP_FROM=WYC@ZHEJIANGYIKAI.COM
 
   nginx:
     image: nginx:alpine
