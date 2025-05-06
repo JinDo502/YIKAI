@@ -6,9 +6,9 @@ export const UsefulLinks = [
 ];
 
 export const Company = [
-  { name: 'Contact Us', href: '/contact' },
   { name: 'Whatsapp', href: 'https://wa.me/qr/CWI4YYBHJBBHC1' },
   { name: 'Facebook', href: '/facebook' },
+  { name: 'Contact Us', href: '/contact' },
 ];
 
 export const SocialLinks = [
@@ -19,9 +19,9 @@ export const SocialLinks = [
 ];
 
 export const ProductMenu = [
-  { name: 'Parker Hydraulic Gear Pump' },
-  { name: 'KP Hydraulic Gear Pump' },
   { name: 'PTO' },
   { name: 'Tentsuki Hoist' },
+  { name: 'KP Hydraulic Gear Pump' },
+  { name: 'Parker Hydraulic Gear Pump' },
   { name: 'Special Hydraulic Products' },
 ];

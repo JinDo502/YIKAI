@@ -19,7 +19,7 @@ const ProductInformation = (props: InfoProps) => {
       <EnterAnimate type='slideLeft' className={`relative inline-block text-2xl text-[var(--heading)] font-roboto font-bold pb-4 mb-5 ${afterClass}`}>
         Product Information
       </EnterAnimate>
-      <div className='space-y-3'>
+      <div className='space-y-5'>
         <EnterAnimate type='slideUp' delay={0.5} className='text-[var(--heading)]'>
           <div className='font-blod opacity-50'>Categories:</div>
           <div className='font-blod'>{categories}</div>
@@ -37,7 +37,7 @@ const ProductInformation = (props: InfoProps) => {
 
       <EnterAnimate type='slideUp' delay={0.5 + keys?.length * 0.1}>
         <Link href='/contact'>
-          <button className='mt-5 bg-[var(--accent)] text-white px-4 py-2 rounded-full font-roboto font-bold hover:opacity-80'>Contact Us</button>
+          <button className='mt-5 bg-[var(--accent)] text-white px-16 py-2 rounded-full font-roboto font-bold hover:opacity-80'>Contact Us</button>
         </Link>
       </EnterAnimate>
     </div>

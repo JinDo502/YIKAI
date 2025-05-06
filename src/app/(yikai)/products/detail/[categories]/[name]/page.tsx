@@ -46,8 +46,8 @@ const ProductDetail = async ({ params }: ProductDetailProps) => {
     <div className='bg-white'>
       <PageBanner src='/images/product/header.jpg' alt={`${categories}-${name}`} title='Products' />
       <div className='flex flex-col gap-4 py-15 max-w-7xl mx-auto'>
-        <div className='grid grid-cols-12 gap-4 flex items-cneter'>
-          <EnterAnimate type='scale' className='col-span-8'>
+        <div className='grid grid-cols-12 gap-4 flex items-center'>
+          <EnterAnimate type='scale' className='col-span-7'>
             <ProductDetailSwiper images={data?.images?.main?.map((image) => ({ name: image, image: image })) || []} />
           </EnterAnimate>
           <ProductInformation data={data} categories={categories} />

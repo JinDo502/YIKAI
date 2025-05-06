@@ -27,11 +27,11 @@ const iconBoxes = [
 
 const ExhibitionShowcasingContent = () => {
   return (
-    <div className='grid grid-cols-3 gap-8'>
+    <div className='flex flex-wrap space-y-16 justify-center'>
       {iconBoxes.map((item, index) => {
         return (
-          <div key={item.title + index} className='flex flex-col items-center col-span-1 gap-4'>
-            <EnterAnimate type='scale' className='relative w-[75%] h-auto aspect-square rounded-full overflow-hidden'>
+          <div key={item.title + index} className='flex flex-col items-center w-[calc(100%/3)]'>
+            <EnterAnimate type='scale' className='relative w-[50%] h-auto aspect-square rounded-full overflow-hidden'>
               <Image src={item.image} alt='' fill className='object-cover' />
             </EnterAnimate>
             <EnterAnimate type='slideUp' className='flex flex-col gap-2 items-center'>
