@@ -28,7 +28,7 @@ const Product = async ({ params }: ProductProps) => {
   return (
     <div className='bg-white'>
       <PageBanner src='/images/product/header.jpg' alt='Products' title='Products' />
-      <div className='max-w-7xl mx-auto py-15 flex gap-10'>
+      <div className='max-w-7xl mx-auto py-5 md:py-15 flex flex-col md:flex-row gap-4 md:gap-10 px-4 md:px-0'>
         <Menu selected={selectType} />
 
         <List selectType={selectType} />

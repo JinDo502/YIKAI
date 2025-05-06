@@ -46,18 +46,18 @@ const ProductDetail = async ({ params }: ProductDetailProps) => {
   return (
     <div className='bg-white'>
       <PageBanner src='/images/product/header.jpg' alt={`${categories}-${name}`} title='Products' />
-      <div className='flex flex-col gap-4 py-15 md: max-w-7xl mx-auto'>
-        <div className='grid grid-cols-12 gap-4 flex items-center'>
-          <EnterAnimate type='scale' className='col-span-7'>
+      <div className='flex flex-col gap-4 py-5 md:py-15 md:max-w-7xl mx-auto px-4 md:px-0'>
+        <div className='grid grid-cols-12 gap-4 flex items-center flex-col md:flex-row'>
+          <EnterAnimate type='scale' className='col-span-12 md:col-span-7'>
             <ProductDetailSwiper images={data?.images?.main?.map((image) => ({ name: image, image: image })) || []} />
           </EnterAnimate>
-          <div className='col-span-5'>
+          <div className='col-span-12 md:col-span-5'>
             <ProductInformation data={data} categories={categories} />
           </div>
         </div>
 
         {data && data.images.secondary.length > 0 && (
-          <div className='grid grid-cols-2 gap-4'>
+          <div className='grid grid-cols-2 gap-4 mt-2 md:mt-4'>
             {data?.images?.secondary?.map((item) => (
               <EnterAnimate type='slideUp' key={item} className={`${colSpan} shadow-[0_2px_30px_rgba(0,0,0,0.1)] flex items-center`}>
                 <ImagePreview image={item} />
