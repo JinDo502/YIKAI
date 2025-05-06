@@ -30,7 +30,7 @@ const ExhibitionShowcasingContent = () => {
     <div className='flex flex-wrap space-y-16 justify-center'>
       {iconBoxes.map((item, index) => {
         return (
-          <div key={item.title + index} className='flex flex-col items-center w-[calc(100%/3)]'>
+          <div key={item.title + index} className='flex flex-col items-center gap-4 w-[calc(100%/3)]'>
             <EnterAnimate type='scale' className='relative w-[50%] h-auto aspect-square rounded-full overflow-hidden'>
               <Image src={item.image} alt='' fill className='object-cover' />
             </EnterAnimate>

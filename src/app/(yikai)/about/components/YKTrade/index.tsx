@@ -1,11 +1,43 @@
+'use client';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
 import Image from 'next/image';
+import 'swiper/css';
+import yikai from '@/public/images/about/yikai';
+import EnterAnimate from '@/components/EnterAnimate';
+
+const SwiperContent = () => {
+  return (
+    <Swiper
+      loop
+      speed={600}
+      slidesPerView='auto'
+      modules={[Autoplay]}
+      spaceBetween={30}
+      autoplay={{ delay: 2000 }}
+      breakpoints={{
+        768: { slidesPerView: 4, spaceBetween: 20 },
+        0: { slidesPerView: 1, spaceBetween: 10 },
+      }}
+    >
+      {yikai.map((image) => (
+        <SwiperSlide key={image}>
+          <div className='relative w-full h-full shadow-[0_2px_30px_rgba(0,0,0,0.1)]'>
+            <Image src={image} alt={image} className='object-cover w-full h-full' sizes='(max-width: 768px) 100vw, 25vw' width={400} height={400} />
+          </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  );
+};
 
 const YKTrade = () => {
   return (
-    <div className='relative grid grid-cols-12 gap-4'>
-      <div className='col-span-7 text-[var(--heading)] font-roboto '>
+    <div className='relative w-full'>
+      <EnterAnimate type='slideRight' className='text-[var(--heading)] font-roboto '>
         <h2 className='text-5xl font-bold mb-20'>YIKAI TRADE</h2>
-        <div className='p-10 bg-[var(--default)]/4 space-y-4 pr-[calc(2/7*100%)]'>
+        <div className='p-10 bg-[var(--default)]/4 space-y-4'>
           <h3 className='text-3xl font-bold opacity-80'>Our Story</h3>
           <p>
             Zhejiang YIKAI Import and Export Co., Ltd. specializes in hydraulic systems for construction machinery, focusing on supplying core components such as pumps, cylinders,
@@ -50,13 +82,10 @@ const YKTrade = () => {
             construction machinery, injecting strong momentum into the development of the construction machinery industry.
           </p>
         </div>
-      </div>
-
-      <div className='col-span-5 '>
-        <div className='w-full aspect-[4/3] scale-[calc(7/5)] translate-y-[20%] -translate-x-[20%] relative'>
-          <Image src='/images/about/about.png' alt='about' fill className='object-cover pl-4' />
-        </div>
-      </div>
+      </EnterAnimate>
+      <EnterAnimate type='slideLeft' className='w-[60%] absolute right-0 top-0'>
+        <SwiperContent />
+      </EnterAnimate>
     </div>
   );
 };
