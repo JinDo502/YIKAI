@@ -29,6 +29,7 @@ const ContactCard = (props: ContactCardProps) => {
   const [status, setStatus] = useState<Status>('initial');
 
   const handleSubmit = async (e: React.FormEvent) => {
+    if (status === 'loading') return;
     setStatus('loading');
     e.preventDefault();
     const response = await fetch('/api/sendEmail', {
@@ -36,8 +37,8 @@ const ContactCard = (props: ContactCardProps) => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData),
     });
-    const result = await response.json();
-    setStatus(result.success ? 'success' : 'error');
+    await response.json();
+    setStatus(response.ok ? 'success' : 'error');
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -56,12 +57,18 @@ const ContactCard = (props: ContactCardProps) => {
         <textarea onChange={handleChange} className={`${inputClass} ${inputFocusClass} col-span-2`} name='message' rows={6} placeholder='Message' required />
 
         <div className='text-center col-span-2'>
-          {status === 'loading' && <div className='loading'>Loading</div>}
+          <button type='submit' className={buttonClass}>
+            {status === 'loading' ? (
+              <div className='flex items-center justify-center gap-2'>
+                <div className='w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin'></div>
+                Loading...
+              </div>
+            ) : (
+              buttonText
+            )}
+          </button>
           {status === 'error' && <div className='error-message'>Error</div>}
           {status === 'success' && <div className='sent-message'>Your quote request has been sent successfully. Thank you!</div>}
-          <button type='submit' className={buttonClass}>
-            {buttonText}
-          </button>
         </div>
       </div>
     </form>
