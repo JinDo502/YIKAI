@@ -23,7 +23,7 @@ const iconBoxes = [
 
 const StrategicAchievementsContent = () => {
   return (
-    <EnterAnimate type='slideRight' className='grid grid-cols-2 gap-8'>
+    <EnterAnimate type='slideRight' className='grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8'>
       {iconBoxes.map((item) => {
         return (
           <div key={item.icon + item.title} className='flex gap-4 items-start group'>

@@ -18,7 +18,7 @@ const SwiperContent = () => {
       autoplay={{ delay: 2000 }}
       breakpoints={{
         768: { slidesPerView: 4, spaceBetween: 20 },
-        0: { slidesPerView: 1, spaceBetween: 10 },
+        0: { slidesPerView: 2, spaceBetween: 10 },
       }}
     >
       {yikai.map((image) => (
@@ -36,7 +36,7 @@ const YKTrade = () => {
   return (
     <div className='relative w-full'>
       <EnterAnimate type='slideRight' className='text-[var(--heading)] font-roboto '>
-        <h2 className='text-5xl font-bold mb-20'>YIKAI TRADE</h2>
+        <h2 className='text-3xl md:text-5xl font-bold ml-4 md:ml-0 mb-4 md:mb-20'>YIKAI TRADE</h2>
         <div className='p-10 bg-[var(--default)]/4 space-y-4'>
           <h3 className='text-3xl font-bold opacity-80'>Our Story</h3>
           <p>
@@ -83,7 +83,7 @@ const YKTrade = () => {
           </p>
         </div>
       </EnterAnimate>
-      <EnterAnimate type='slideLeft' className='w-[60%] absolute right-0 top-0'>
+      <EnterAnimate type='slideLeft' className='w-[40%] md:w-[60%] absolute right-0 top-0'>
         <SwiperContent />
       </EnterAnimate>
     </div>

@@ -31,7 +31,7 @@ const ServiceEcosystemContent = () => {
             duration={0.5 + 0.1 * index}
             threshold={0.3}
             key={item.icon + item.title}
-            className='flex gap-8 items-center group transition-all duration-300'
+            className='flex gap-4 md:gap-8 items-center group transition-all duration-300'
           >
             <div className='flex items-center justify-center rounded-sm h-14 w-14 shadow-[0_2px_30px_rgba(0,0,0,0.1)]  bg-white group-hover:bg-[var(--accent)] transition-all duration-300'>
               <i className={`${item.icon} text-2xl text-[var(--accent)] group-hover:text-white transition-all duration-300`} />

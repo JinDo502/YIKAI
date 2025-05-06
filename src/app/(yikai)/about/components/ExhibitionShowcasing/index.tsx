@@ -30,12 +30,12 @@ const ExhibitionShowcasingContent = () => {
     <div className='flex flex-wrap space-y-16 justify-center'>
       {iconBoxes.map((item, index) => {
         return (
-          <div key={item.title + index} className='flex flex-col items-center gap-4 w-[calc(100%/3)]'>
-            <EnterAnimate type='scale' className='relative w-[50%] h-auto aspect-square rounded-full overflow-hidden'>
+          <div key={item.title + index} className='flex flex-col items-center gap-2 md:gap-4 w-[calc(100%/3)]'>
+            <EnterAnimate type='scale' className='relative w-[75%] md:w-[50%] h-auto aspect-square rounded-full overflow-hidden'>
               <Image src={item.image} alt='' fill className='object-cover' />
             </EnterAnimate>
             <EnterAnimate type='slideUp' className='flex flex-col gap-2 items-center'>
-              <h4 className='text-xl font-bold text-[var(--heading)]'>{item.title}</h4>
+              <h4 className='text-sm md:text-xl font-bold text-[var(--heading)] text-center'>{item.title}</h4>
             </EnterAnimate>
           </div>
         );
