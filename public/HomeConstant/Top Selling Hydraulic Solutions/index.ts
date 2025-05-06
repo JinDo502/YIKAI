@@ -1,4 +1,4 @@
-import productsMap from '@/public/ProductsConstant/type';
+import productsMap from '@/public/ProductsConstant';
 
 const name = ['C101', 'KP1505AR', 'KRM160S', 'CONTROL HANDLE'];
 

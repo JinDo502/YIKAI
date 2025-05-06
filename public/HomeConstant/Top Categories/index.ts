@@ -1,4 +1,4 @@
-import productsMap from '@/public/ProductsConstant/type';
+import productsMap from '@/public/ProductsConstant';
 
 type ProductType = keyof typeof productsMap;
 

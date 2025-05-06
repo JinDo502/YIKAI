@@ -1,6 +1,6 @@
 import EnterAnimate from '@/components/EnterAnimate';
 import ProductCard from '@/components/ProductCard';
-import productsMap from '@/public/ProductsConstant/type';
+import productsMap from '@/public/ProductsConstant';
 
 interface ListProps {
   selectType: string;

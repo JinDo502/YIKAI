@@ -1,6 +1,6 @@
 // 产品详情页
 
-import productsMap from '@/public/ProductsConstant/type';
+import productsMap from '@/public/ProductsConstant';
 import ProductDetailSwiper from './components/ProductDetailSwiper';
 import ProductInformation from './components/ProductInformation';
 import PageBanner from '@/components/PageBanner';
@@ -40,7 +40,7 @@ const ProductDetail = async ({ params }: ProductDetailProps) => {
 
   const data = productsMap[categories]?.find((item) => item?.name === name);
 
-  const colSpan = `col-span-${data?.images?.secondary?.length && data?.images?.secondary?.length > 1 ? '6' : '12'}`;
+  const colSpan = `col-span-${data?.images?.secondary?.length && data?.images?.secondary?.length > 1 ? '1' : '2'}`;
 
   return (
     <div className='bg-white'>
@@ -54,13 +54,13 @@ const ProductDetail = async ({ params }: ProductDetailProps) => {
         </div>
 
         {data && data.images.secondary.length > 0 && (
-          <EnterAnimate type='slideUp' className='grid grid-cols-12 gap-4'>
+          <div className='grid grid-cols-2 gap-4'>
             {data?.images?.secondary?.map((item) => (
-              <div key={item} className={`${colSpan} shadow-[0_2px_30px_rgba(0,0,0,0.1)] flex items-center`}>
+              <EnterAnimate type='slideUp' key={item} className={`${colSpan} shadow-[0_2px_30px_rgba(0,0,0,0.1)] flex items-center`}>
                 <ImagePreview image={item} />
-              </div>
+              </EnterAnimate>
             ))}
-          </EnterAnimate>
+          </div>
         )}
       </div>
     </div>
