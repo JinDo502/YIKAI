@@ -1,3 +1,4 @@
+import AnimateNumber from '@/components/AnimateNumber';
 import ContentCard from '@/components/ContentCard';
 
 const Card = (props: { title: string; value: number; icon: string }) => {
@@ -6,7 +7,7 @@ const Card = (props: { title: string; value: number; icon: string }) => {
     <div className='p-8 bg-white shadow-[0px_0px_30px_rgba(0,0,0,0.1)] flex items-center group'>
       <i className={`${icon} flex-shrink-0 text-5xl text-[var(--accent)] mr-4 group-hover:scale-110 transition-all duration-300`} />
       <div className='gap-2 flex flex-col'>
-        <p className='text-4xl font-bold text-[var(--heading)]'>{value}</p>
+        <AnimateNumber value={value} className='text-4xl font-bold text-[var(--heading)]' />
         <h3 className='text-base'>{title}</h3>
       </div>
     </div>
@@ -25,7 +26,15 @@ const AchievementsContent = () => {
 };
 
 const Achievements = () => {
-  return <ContentCard title='Our Achievements at a Glance' titlePosition='center' backgroundColor='white' content={<AchievementsContent />} />;
+  return (
+    <ContentCard
+      title='Our Achievements at a Glance'
+      titlePosition='center'
+      backgroundColor='white'
+      content={<AchievementsContent />}
+      animationProps={{ type: 'scale', delay: 0.5, duration: 1, threshold: 0.3 }}
+    />
+  );
 };
 
 export default Achievements;

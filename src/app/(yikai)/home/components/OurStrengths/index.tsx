@@ -1,4 +1,5 @@
 import ContentCard from '@/components/ContentCard';
+import EnterAnimate from '@/components/EnterAnimate';
 
 const Card = (props: { title: string; description: string; icon: string }) => {
   const { title, description, icon } = props;
@@ -21,10 +22,18 @@ const Card = (props: { title: string; description: string; icon: string }) => {
 const OurStrengthsContent = () => {
   return (
     <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-      <Card title='Data Insights' description='Optimizing strategies with advanced analytics for better efficiency and outcomes.' icon='bi bi-clipboard-data-fill' />
-      <Card title='Supply Chain' description='Strong partnerships ensure seamless operations and consistent product delivery.' icon='bi bi-diagram-3-fill' />
-      <Card title='Experience' description='Over a decade of success in hydraulic systems and custom engineering solutions.' icon='bi bi-chat-left-dots-fill' />
-      <Card title='Excellence' description='Renowned for high-quality products, tailored solutions, and customer satisfaction.' icon='bi bi-trophy-fill' />
+      <EnterAnimate type='slideRight'>
+        <Card title='Data Insights' description='Optimizing strategies with advanced analytics for better efficiency and outcomes.' icon='bi bi-clipboard-data-fill' />
+      </EnterAnimate>
+      <EnterAnimate type='slideLeft'>
+        <Card title='Supply Chain' description='Strong partnerships ensure seamless operations and consistent product delivery.' icon='bi bi-diagram-3-fill' />
+      </EnterAnimate>
+      <EnterAnimate type='slideRight'>
+        <Card title='Experience' description='Over a decade of success in hydraulic systems and custom engineering solutions.' icon='bi bi-chat-left-dots-fill' />
+      </EnterAnimate>
+      <EnterAnimate type='slideLeft'>
+        <Card title='Excellence' description='Renowned for high-quality products, tailored solutions, and customer satisfaction.' icon='bi bi-trophy-fill' />
+      </EnterAnimate>
     </div>
   );
 };

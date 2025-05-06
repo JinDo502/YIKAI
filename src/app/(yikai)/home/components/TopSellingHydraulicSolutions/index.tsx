@@ -1,14 +1,15 @@
 import ContentCard from '@/components/ContentCard';
+import EnterAnimate from '@/components/EnterAnimate';
 import ProductCard from '@/components/ProductCard';
 import topSellingHydraulicSolutions from '@/public/HomeConstant/Top Selling Hydraulic Solutions';
 
 const TopSellingHydraulicSolutionsContent = () => {
   return (
-    <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>
+    <EnterAnimate type='bounce' className='grid grid-cols-2 md:grid-cols-4 gap-4'>
       {topSellingHydraulicSolutions.map((item) => (
         <ProductCard type={item.type} name={item?.name} key={item.name} title={item.model} image={item.image} />
       ))}
-    </div>
+    </EnterAnimate>
   );
 };
 

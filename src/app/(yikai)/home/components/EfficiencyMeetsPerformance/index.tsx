@@ -1,4 +1,5 @@
 import ContentCard from '@/components/ContentCard';
+import EnterAnimate from '@/components/EnterAnimate';
 import Image from 'next/image';
 
 const iconBoxes = [
@@ -26,7 +27,7 @@ const iconBoxes = [
 
 const EfficiencyMeetsPerformanceContent = () => {
   return (
-    <div className='flex flex-col gap-8'>
+    <EnterAnimate type='flip' className='flex flex-col gap-8'>
       {iconBoxes.map((item) => {
         return (
           <div key={item.icon} className='flex gap-8 items-center group transition-all duration-300'>
@@ -40,7 +41,7 @@ const EfficiencyMeetsPerformanceContent = () => {
           </div>
         );
       })}
-    </div>
+    </EnterAnimate>
   );
 };
 
@@ -57,9 +58,9 @@ const EfficiencyMeetsPerformance = () => {
       backgroundColor='#f4f7f6'
       content={<EfficiencyMeetsPerformanceContent />}
       leftContent={
-        <div className='relative w-full h-full'>
+        <EnterAnimate type='scale' className='relative w-full h-full'>
           <Image src='/images/efficiency-meets-performance.gif' alt='Efficiency Meets Performance' fill className='object-cover' sizes='(max-width: 768px) 100vw, 50vw' />
-        </div>
+        </EnterAnimate>
       }
     />
   );

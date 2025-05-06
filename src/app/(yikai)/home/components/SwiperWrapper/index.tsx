@@ -86,6 +86,7 @@ const ProductSwiper = () => {
       titlePosition='center'
       backgroundColor='white'
       content={<ProductSwiperContent />}
+      animationProps={{ type: 'fade', delay: 0.5, duration: 1, threshold: 0.3 }}
     />
   );
 };
