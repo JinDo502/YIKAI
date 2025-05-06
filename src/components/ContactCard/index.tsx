@@ -39,6 +39,10 @@ const ContactCard = (props: ContactCardProps) => {
     });
     await response.json();
     setStatus(response.ok ? 'success' : 'error');
+
+    setTimeout(() => {
+      setStatus('initial');
+    }, 3000);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -56,7 +60,7 @@ const ContactCard = (props: ContactCardProps) => {
         <input onChange={handleChange} type='tel' className={`${inputClass} ${inputFocusClass} col-span-1`} name='phone' placeholder='Phone' required />
         <textarea onChange={handleChange} className={`${inputClass} ${inputFocusClass} col-span-2`} name='message' rows={6} placeholder='Message' required />
 
-        <div className='text-center col-span-2'>
+        <div className='text-center col-span-2 space-y-2'>
           <button type='submit' className={buttonClass}>
             {status === 'loading' ? (
               <div className='flex items-center justify-center gap-2'>
@@ -67,8 +71,8 @@ const ContactCard = (props: ContactCardProps) => {
               buttonText
             )}
           </button>
-          {status === 'error' && <div className='error-message'>Error</div>}
-          {status === 'success' && <div className='sent-message'>Your quote request has been sent successfully. Thank you!</div>}
+          {status === 'error' && <div className='text-red-500 font-bold text-sm'>Error</div>}
+          {status === 'success' && <div className='text-green-500 font-bold text-sm'>Your quote request has been sent successfully. Thank you!</div>}
         </div>
       </div>
     </form>
