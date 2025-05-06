@@ -26,8 +26,10 @@ const StrategicAchievementsContent = () => {
     <EnterAnimate type='slideRight' className='grid grid-cols-2 gap-8'>
       {iconBoxes.map((item) => {
         return (
-          <div key={item.icon + item.title} className='flex gap-4 items-start'>
-            <i className={`${item.icon} text-2xl text-[var(--accent)] pt-4`} />
+          <div key={item.icon + item.title} className='flex gap-4 items-start group'>
+            <div className='flex items-center justify-center rounded-sm h-14 w-14 bg-transparent group-hover:shadow-[0_2px_30px_rgba(0,0,0,0.1)] group-hover:bg-[var(--accent)] transition-all duration-300'>
+              <i className={`${item.icon} text-2xl text-[var(--accent)] group-hover:text-white transition-all duration-300`} />
+            </div>
             <div className='flex-1'>
               <p className='text-sm mt-2'>{item.title}</p>
             </div>
