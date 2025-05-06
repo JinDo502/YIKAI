@@ -10,7 +10,7 @@ const Info = () => {
           </div>
 
           <h3 className='text-xl font-bold text-[var(--heading)]'>Email Us</h3>
-          <p className='text-sm text-[var(--heading)]'>info@example.com</p>
+          <p className='text-sm text-[var(--heading)]'>newright_hpp@163.com</p>
         </div>
 
         <div className='flex flex-col items-center justify-center gap-2'>
@@ -19,7 +19,7 @@ const Info = () => {
           </div>
 
           <h3 className='text-xl font-bold text-[var(--heading)]'>Call Us</h3>
-          <p className='text-sm text-[var(--heading)]'>+1 5589 55488 55</p>
+          <p className='text-sm text-[var(--heading)]'>+86 13906503693</p>
         </div>
       </div>
 
