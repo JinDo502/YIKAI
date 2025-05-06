@@ -14,7 +14,7 @@ const Contact = () => {
   return (
     <div className='bg-white'>
       <PageBanner src='/images/contact/header.jpg' alt='contact banner' title='Contact' />
-      <div className='max-w-7xl mx-auto py-15 space-y-10'>
+      <div className='md:max-w-7xl mx-auto py-5 md:py-15 space-y-5 md:space-y-10'>
         <Info />
         <EnterAnimate type='slideUp' className='w-full'>
           <Map />
