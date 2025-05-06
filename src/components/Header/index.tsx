@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation';
 import { UsefulLinks } from '@/common/menu';
 
 const Header = () => {
-  const [active, setActive] = useState('home');
+  const [active, setActive] = useState('');
   const [scrollBg, setScrollBg] = useState(false);
   const isActive = (item: string) => active === item;
   const pathname = usePathname();

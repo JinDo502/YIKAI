@@ -49,7 +49,7 @@ const ContentCard = (props: ContentCardProps) => {
             {title}
           </EnterAnimate>
           {subTitle && (
-            <EnterAnimate type='fade' className='mt-2 text-base text-[var(--default)]'>
+            <EnterAnimate type='slideUp' className='mt-2 text-base text-[var(--default)]'>
               {subTitle}
             </EnterAnimate>
           )}

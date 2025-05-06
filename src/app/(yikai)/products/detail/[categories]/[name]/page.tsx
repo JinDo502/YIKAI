@@ -5,6 +5,7 @@ import ProductDetailSwiper from './components/ProductDetailSwiper';
 import ProductInformation from './components/ProductInformation';
 import PageBanner from '@/components/PageBanner';
 import ImagePreview from './components/ImagePreview';
+import EnterAnimate from '@/components/EnterAnimate';
 type productType = keyof typeof productsMap;
 
 export async function generateStaticParams() {
@@ -46,22 +47,20 @@ const ProductDetail = async ({ params }: ProductDetailProps) => {
       <PageBanner src='/images/product/header.jpg' alt={`${categories}-${name}`} title='Products' />
       <div className='flex flex-col gap-4 py-15 max-w-7xl mx-auto'>
         <div className='grid grid-cols-12 gap-4 flex items-cneter'>
-          <div className='col-span-8'>
+          <EnterAnimate type='scale' className='col-span-8'>
             <ProductDetailSwiper images={data?.images?.main?.map((image) => ({ name: image, image: image })) || []} />
-          </div>
-          <div className='col-span-4'>
-            <ProductInformation data={data} categories={categories} />
-          </div>
+          </EnterAnimate>
+          <ProductInformation data={data} categories={categories} />
         </div>
 
         {data && data.images.secondary.length > 0 && (
-          <div className='grid grid-cols-12 gap-4'>
+          <EnterAnimate type='slideUp' className='grid grid-cols-12 gap-4'>
             {data?.images?.secondary?.map((item) => (
               <div key={item} className={`${colSpan} shadow-[0_2px_30px_rgba(0,0,0,0.1)] flex items-center`}>
                 <ImagePreview image={item} />
               </div>
             ))}
-          </div>
+          </EnterAnimate>
         )}
       </div>
     </div>

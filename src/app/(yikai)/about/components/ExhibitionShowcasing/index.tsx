@@ -1,4 +1,5 @@
 import ContentCard from '@/components/ContentCard';
+import EnterAnimate from '@/components/EnterAnimate';
 import Image from 'next/image';
 
 const iconBoxes = [
@@ -30,12 +31,12 @@ const ExhibitionShowcasingContent = () => {
       {iconBoxes.map((item, index) => {
         return (
           <div key={item.title + index} className='flex flex-col items-center col-span-1 gap-4'>
-            <div className='relative w-[75%] h-auto aspect-square rounded-full overflow-hidden'>
+            <EnterAnimate type='scale' className='relative w-[75%] h-auto aspect-square rounded-full overflow-hidden'>
               <Image src={item.image} alt='' fill className='object-cover' />
-            </div>
-            <div className='flex flex-col gap-2 items-center'>
+            </EnterAnimate>
+            <EnterAnimate type='slideUp' className='flex flex-col gap-2 items-center'>
               <h4 className='text-xl font-bold text-[var(--heading)]'>{item.title}</h4>
-            </div>
+            </EnterAnimate>
           </div>
         );
       })}

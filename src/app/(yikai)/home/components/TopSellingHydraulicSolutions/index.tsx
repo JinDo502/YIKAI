@@ -5,7 +5,7 @@ import topSellingHydraulicSolutions from '@/public/HomeConstant/Top Selling Hydr
 
 const TopSellingHydraulicSolutionsContent = () => {
   return (
-    <EnterAnimate type='bounce' className='grid grid-cols-2 md:grid-cols-4 gap-4'>
+    <EnterAnimate type='slideUp' className='grid grid-cols-2 md:grid-cols-4 gap-4'>
       {topSellingHydraulicSolutions.map((item) => (
         <ProductCard type={item.type} name={item?.name} key={item.name} title={item.model} image={item.image} />
       ))}

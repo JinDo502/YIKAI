@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ProductMenu } from '@/common/menu';
+import EnterAnimate from '@/components/EnterAnimate';
 
 interface MenuProps {
   selected: string;
@@ -7,7 +8,7 @@ interface MenuProps {
 
 const Menu = ({ selected }: MenuProps) => {
   return (
-    <div className='flex gap-4 flex-col bg-[var(--default)]/3 rounded-lg'>
+    <EnterAnimate type='slideRight' className='flex gap-4 flex-col bg-[var(--default)]/3 rounded-lg'>
       <div className='text-2xl font-bold text-[var(--heading)] border-b border-[var(--default)]/5 p-5'>Categories</div>
       <div className='flex flex-col space-y-2 divide-y divide-[var(--default)]/5 px-5'>
         {ProductMenu.map((item) => {
@@ -24,7 +25,7 @@ const Menu = ({ selected }: MenuProps) => {
           );
         })}
       </div>
-    </div>
+    </EnterAnimate>
   );
 };
 

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import AnimatePrinter from '../AnimatePrinter';
 
 interface Props {
   src: string;
@@ -22,11 +23,11 @@ const PageBanner = (props: Props) => {
       {title && (
         <div className={positionBaseClass}>
           <div className={`${divBaseClass} z-10 relative bg-[var(--accent)]`}>
-            <span className={`${textBaseClass} ${textPositionClass} px-8 py-4 z-10 text-white`}>{title}</span>
-            <div className={`${textBaseClass} ${textTransformClass} blur-[2px] text-[#383838]`}>{title}</div>
+            <AnimatePrinter text={title} className={`${textBaseClass} ${textPositionClass} px-8 py-4 z-10 text-white`} />
+            <AnimatePrinter text={title} className={`${textBaseClass} ${textTransformClass} blur-[2px] text-[#383838]`} />
           </div>
           <div className={`${divBaseClass} ${positionClass} bg-[#383838]`}>
-            <span className={`${textBaseClass} text-[#383838]`}>{title}</span>
+            <AnimatePrinter text={title} className={`${textBaseClass} text-[#383838]`} />
           </div>
         </div>
       )}

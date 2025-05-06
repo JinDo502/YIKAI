@@ -1,4 +1,5 @@
 import ContentCard from '@/components/ContentCard';
+import EnterAnimate from '@/components/EnterAnimate';
 import Image from 'next/image';
 
 const iconBoxes = [
@@ -22,7 +23,7 @@ const iconBoxes = [
 
 const StrategicAchievementsContent = () => {
   return (
-    <div className='grid grid-cols-2 gap-8'>
+    <EnterAnimate type='slideRight' className='grid grid-cols-2 gap-8'>
       {iconBoxes.map((item) => {
         return (
           <div key={item.icon + item.title} className='flex gap-4 items-start'>
@@ -33,7 +34,7 @@ const StrategicAchievementsContent = () => {
           </div>
         );
       })}
-    </div>
+    </EnterAnimate>
   );
 };
 
@@ -45,9 +46,9 @@ const StrategicAchievements = () => {
       subTitle='Over the years, with strong production capabilities and excellent service, Zhejiang YIKAI Import and Export Co., Ltd. has established long-term stable partnerships with numerous renowned engineering machinery enterprises both domestically and internationally. By optimizing the supply chain system, we achieve efficient product supply and effective cost control, winning market recognition with high-quality products and competitive prices.'
       content={<StrategicAchievementsContent />}
       rightContent={
-        <div className='relative w-full h-full'>
+        <EnterAnimate type='scale' className='relative w-full h-full'>
           <Image src='/images/about/about2.png' alt='Strategic Achievements' fill className='object-cover' sizes='(max-width: 768px) 100vw, 50vw' />
-        </div>
+        </EnterAnimate>
       }
     />
   );

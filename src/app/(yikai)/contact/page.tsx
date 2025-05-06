@@ -1,3 +1,4 @@
+import EnterAnimate from '@/components/EnterAnimate';
 import Info from './components/info';
 import Map from './components/map';
 import PageBanner from '@/components/PageBanner';
@@ -13,10 +14,11 @@ const Contact = () => {
   return (
     <div className='bg-white'>
       <PageBanner src='/images/contact/header.jpg' alt='contact banner' title='Contact' />
-
       <div className='max-w-7xl mx-auto py-15 space-y-10'>
         <Info />
-        <Map />
+        <EnterAnimate type='slideUp' className='w-full'>
+          <Map />
+        </EnterAnimate>
       </div>
     </div>
   );
