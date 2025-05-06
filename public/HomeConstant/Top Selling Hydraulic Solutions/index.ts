@@ -1,6 +1,6 @@
 import productsMap from '@/public/ProductsConstant';
 
-const name = ['KRM201', 'KP1505A', 'C102', 'CONTROL HANDLE'];
+const name = ['KRM201', 'KP1505A', 'C102', 'H-LIFT'];
 
 const allProducts = [
   ...productsMap['Parker Hydraulic Gear Pump']?.map((product) => ({ ...product, type: 'Parker Hydraulic Gear Pump' })),

@@ -1,4 +1,5 @@
 import EnterAnimate from '@/components/EnterAnimate';
+import Image from 'next/image';
 import Link from 'next/link';
 
 interface InfoProps {
@@ -10,6 +11,8 @@ interface InfoProps {
 const ProductInformation = (props: InfoProps) => {
   const { data, categories } = props;
 
+  const hasInformation = data?.images?.information?.length > 0;
+
   const keys = Object.keys(data)?.filter((key) => key != 'images' && key != 'name');
 
   const afterClass = 'after:absolute after:bottom-0 after:left-0 after:block after:h-1 after:w-full after:bg-[var(--accent)]';
@@ -19,21 +22,33 @@ const ProductInformation = (props: InfoProps) => {
       <EnterAnimate type='slideLeft' className={`relative inline-block text-2xl text-[var(--heading)] font-roboto font-bold pb-4 mb-5 ${afterClass}`}>
         Product Information
       </EnterAnimate>
-      <div className='space-y-5'>
-        <EnterAnimate type='slideUp' delay={0.5} className='text-[var(--heading)]'>
-          <div className='font-blod opacity-50'>Categories:</div>
-          <div className='font-blod'>{categories}</div>
-        </EnterAnimate>
-        {keys?.map((key, index) => {
-          const item = data[key];
-          return (
-            <EnterAnimate type='slideUp' delay={0.5 + index * 0.1} key={key} className='text-[var(--heading)]'>
-              <div className='font-blod opacity-50'>{key?.toUpperCase()}:</div>
-              <div className='font-blod'>{item}</div>
+      {!hasInformation && (
+        <div className='space-y-5'>
+          <EnterAnimate type='slideUp' delay={0.5} className='text-[var(--heading)]'>
+            <div className='font-blod opacity-50'>Categories:</div>
+            <div className='font-blod'>{categories}</div>
+          </EnterAnimate>
+          {keys?.map((key, index) => {
+            const item = data[key];
+            return (
+              <EnterAnimate type='slideUp' delay={0.5 + index * 0.1} key={key} className='text-[var(--heading)]'>
+                <div className='font-blod opacity-50'>{key?.toUpperCase()}:</div>
+                <div className='font-blod'>{item}</div>
+              </EnterAnimate>
+            );
+          })}
+        </div>
+      )}
+
+      {hasInformation && (
+        <div className='space-y-5'>
+          {data?.images?.information?.map((item: string) => (
+            <EnterAnimate type='slideLeft' key={item}>
+              <Image src={item} alt={item} width={1000} height={1000} />
             </EnterAnimate>
-          );
-        })}
-      </div>
+          ))}
+        </div>
+      )}
 
       <EnterAnimate type='slideUp' delay={0.5 + keys?.length * 0.1}>
         <Link href='/contact'>

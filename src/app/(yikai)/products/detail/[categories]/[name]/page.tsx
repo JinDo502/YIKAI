@@ -23,8 +23,9 @@ interface ProductDetailProps {
 }
 
 export async function generateMetadata({ params }: ProductDetailProps) {
-  const { name, categories: _categories } = await params;
+  const { name: _name, categories: _categories } = await params;
   const categories = decodeURIComponent(_categories) as productType;
+  const name = decodeURIComponent(_name);
   return {
     title: `YIKAI-${name}`,
     description: `YIKAI-${categories}-${name}`,
@@ -50,7 +51,9 @@ const ProductDetail = async ({ params }: ProductDetailProps) => {
           <EnterAnimate type='scale' className='col-span-7'>
             <ProductDetailSwiper images={data?.images?.main?.map((image) => ({ name: image, image: image })) || []} />
           </EnterAnimate>
-          <ProductInformation data={data} categories={categories} />
+          <div className='col-span-5'>
+            <ProductInformation data={data} categories={categories} />
+          </div>
         </div>
 
         {data && data.images.secondary.length > 0 && (
