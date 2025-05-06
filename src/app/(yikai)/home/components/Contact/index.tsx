@@ -28,7 +28,7 @@ const Contact = () => {
       backgroundColor='#fff'
       content={<ContactContent />}
       rightContent={
-        <EnterAnimate type='slideLeft' className='bg-[var(--default)]/3 p-8 rounded-md'>
+        <EnterAnimate type='slideLeft' className='bg-[var(--default)]/3 m-2 md:m-0 p-4 md:p-8 rounded-md'>
           <ContactCard title='Get a quote' subTitle='Get Your Tailored Solutions Today!' buttonText='Get a quote' />
         </EnterAnimate>
       }

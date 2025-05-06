@@ -104,12 +104,12 @@ const Carousel = ({ interval = 5000 }: CarouselProps) => {
       </div>
 
       {/* 轮播图上方的内容 */}
-      <div className='relative max-w-7xl m-auto min-h-screen flex flex-col items-center'>
-        <div className='flex flex-col items-center m-auto w-[60%] pt-[110px] pb-[60px] px-12 text-center text-white'>
-          <h2 className='relative mb-8 pb-8 text-6xl font-bold after:content-[""] after:block after:w-[80px] after:h-[4px] after:bg-[var(--accent)] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2'>
+      <div className='relative md:max-w-7xl m-auto min-h-screen flex flex-col items-center'>
+        <div className='flex flex-col items-center m-auto w-[60%] pt-[110px] pb-[60px] px-0 md:px-12 text-center text-white'>
+          <h2 className='relative mb-8 pb-8 text-4xl md:text-6xl font-bold after:content-[""] after:block after:w-[80px] after:h-[4px] after:bg-[var(--accent)] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2'>
             Welcome to <br /> YIKAI
           </h2>
-          <p className='text-xl opacity-80 font-default'>EXPORT DELIVERS PREMIUM HYDRAULIC SYSTEMS FOR CONSTRUCTION MACHINERY</p>
+          <p className='md:text-xl opacity-80 font-default'>EXPORT DELIVERS PREMIUM HYDRAULIC SYSTEMS FOR CONSTRUCTION MACHINERY</p>
           <Link href='/about'>
             <button className='inline-block mt-6 text-base font-bold font-roboto text-white px-10 py-3 rounded-full hover:bg-[var(--accent)] hover:text-black transition-colors border-[2px] border-[var(--accent)]'>
               Explore more

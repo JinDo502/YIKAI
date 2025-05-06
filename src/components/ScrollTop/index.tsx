@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { useState, useEffect } from 'react';
 
@@ -25,13 +25,9 @@ const ScrollTop = () => {
   };
 
   return (
-    <div className={`fixed right-5 bottom-5 z-50 transition-all duration-300  ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-      <button
-        onClick={scrollToTop}
-        className="bg-[var(--accent)] text-white text-xl shadow-lg h-10 w-10 rounded-sm flex items-center justify-center"
-        aria-label="Scroll to top"
-      >
-        <i className="bi bi-arrow-up-short"></i>
+    <div className={`fixed left-[100vw] bottom-5 -translate-x-full z-50 transition-all duration-300 pr-5  ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+      <button onClick={scrollToTop} className='bg-[var(--accent)] text-white text-xl shadow-lg h-10 w-10 rounded-sm flex items-center justify-center' aria-label='Scroll to top'>
+        <i className='bi bi-arrow-up-short'></i>
       </button>
     </div>
   );

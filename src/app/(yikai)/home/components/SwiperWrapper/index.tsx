@@ -11,7 +11,7 @@ import Link from 'next/link';
 
 const ProductSwiperContent = () => {
   return (
-    <div className='w-full px-4 py-8 relative'>
+    <div className='w-full md:px-4 md:py-8 relative'>
       <div>
         <Swiper
           loop

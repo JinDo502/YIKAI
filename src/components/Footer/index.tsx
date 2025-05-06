@@ -10,9 +10,9 @@ const Footer = () => {
   return (
     <footer className='bg-[url(/images/footer-bg.jpg)] text-white'>
       <div className='w-full h-full bg-background opacity-[.8]'>
-        <div className='m-auto max-w-7xl pt-12 font-roboto'>
-          <div className='grid grid-cols-12 gap-4 '>
-            <div className='col-span-6 '>
+        <div className='m-auto px-4 md:px-0 md:max-w-7xl pt-12 font-roboto'>
+          <div className='grid grid-cols-6 md:grid-cols-12 gap-4 '>
+            <div className='col-span-6 mb-6 md:mb-0'>
               <Link href='/home'>
                 <div className='font-[700] text-3xl mb-6'>YIKAI</div>
               </Link>
@@ -27,7 +27,7 @@ const Footer = () => {
                   <strong>Factory address:</strong> <span>Hongqiao Industry ,Huzhou City, Zhejiang Province,China</span>
                 </p>
               </div>
-              <div className='flex mt-6 gap-4'>
+              <div className='flex mt-4 md:mt-6 gap-4 '>
                 {SocialLinks.map((item) => (
                   <a
                     key={item.name}
@@ -83,7 +83,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className='m-auto max-w-7xl text-center mt-4 border-t border-white/20'>
+        <div className='m-auto md: max-w-7xl text-center mt-4 border-t border-white/20'>
           <p className='py-6 font-roboto text-sm'>
             © <span>Copyright</span> <strong className='px-1'>YIKAI</strong> <span>All Rights Reserved</span>
           </p>
