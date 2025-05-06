@@ -1,6 +1,6 @@
 import { redirect } from 'next/navigation';
-import { menu } from '@/public/ProductsConstant/menu';
+import { ProductMenu } from '@/common/menu';
 
 export default function Products() {
-  redirect(`/products/${menu[0].name}`);
+  redirect(`/products/${ProductMenu[0].name}`);
 }

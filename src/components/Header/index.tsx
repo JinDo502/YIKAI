@@ -3,19 +3,11 @@
 import Image from 'next/image';
 import logo from '@/public/images/logo.png';
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
-
-const menu = [
-  { name: 'home', href: '/' },
-  { name: 'about', href: '/about' },
-  { name: 'products', href: '/products' },
-  { name: 'contact', href: '/contact' },
-];
+import { UsefulLinks } from '@/common/menu';
 
 const Header = () => {
-  const t = useTranslations('menu');
   const [active, setActive] = useState('home');
   const [scrollBg, setScrollBg] = useState(false);
   const isActive = (item: string) => active === item;
@@ -42,14 +34,18 @@ const Header = () => {
           <span className='text-[#feb900]'>.</span>
         </div>
         <div className='flex items-center'>
-          {menu.map((item, index) => {
+          {UsefulLinks.map((item) => {
             return (
-              <Link key={index} href={item.href} className='p-4'>
+              <Link key={item?.name} href={item.href} className='p-4 group'>
                 <div>
-                  <div className={`font-poppins font-[600] text-sm ${scrollBg ? 'text-black' : 'text-white'} leading-none ${isActive(item?.name) ? '' : 'opacity-[.55]'}`}>
-                    {t(item?.name)}
+                  <div
+                    className={`font-poppins font-[600] text-sm ${scrollBg ? 'text-black' : 'text-white'} leading-none ${
+                      isActive(item?.path) ? '' : 'opacity-[.55]'
+                    } group-hover:opacity-100 transition-all duration-300`}
+                  >
+                    {item?.name}
                   </div>
-                  <div className={`bg-[#feb900] h-[2px] mt-[6px] ${isActive(item?.name) ? '' : 'opacity-0'}`}></div>
+                  <div className={`bg-[#feb900] h-[2px] mt-[6px] ${isActive(item?.path) ? 'w-full' : 'w-0'} group-hover:w-full transition-all duration-300`} />
                 </div>
               </Link>
             );

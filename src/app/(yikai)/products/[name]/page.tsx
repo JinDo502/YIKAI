@@ -1,10 +1,10 @@
 import Menu from './components/Menu';
-import { menu } from '@/public/ProductsConstant/menu';
+import { ProductMenu } from '@/common/menu';
 import List from './components/List';
 import PageBanner from '@/components/PageBanner';
 
 export async function generateStaticParams() {
-  return menu.map((item) => ({ name: item.name }));
+  return ProductMenu.map((item) => ({ name: item.name }));
 }
 
 interface ProductProps {

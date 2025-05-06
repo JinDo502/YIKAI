@@ -1,51 +1,10 @@
 import Link from 'next/link';
-import { menu } from '@/public/ProductsConstant/menu';
+import { Company, ProductMenu, SocialLinks, UsefulLinks } from '@/common/menu';
 
-const usefulLinks = [
-  {
-    name: 'Home',
-    href: '/home',
-  },
-  {
-    name: 'About us',
-    href: '/about',
-  },
-  {
-    name: 'Product',
-    href: '/products',
-  },
-  {
-    name: 'Contact',
-    href: '/contact',
-  },
-];
-
-const ourProduct = menu.map((item) => ({
+const ourProduct = ProductMenu.map((item) => ({
   name: item.name,
   href: `/products/${item.name}`,
 }));
-
-const company = [
-  {
-    name: 'Contact Us',
-    href: '/contact',
-  },
-  {
-    name: 'Whatsapp',
-    href: 'https://wa.me/qr/CWI4YYBHJBBHC1',
-  },
-  {
-    name: 'Facebook',
-    href: '/facebook',
-  },
-];
-
-const socialLinks: { name: string; icon: string; href?: string }[] = [
-  { name: 'Twitter', icon: 'bi-twitter-x' },
-  { name: 'Facebook', icon: 'bi-facebook' },
-  { name: 'Whatsapp', icon: 'bi-whatsapp', href: 'https://wa.me/qr/CWI4YYBHJBBHC1' },
-  { name: 'Linkedin', icon: 'bi-linkedin' },
-];
 
 const Footer = () => {
   return (
@@ -69,7 +28,7 @@ const Footer = () => {
                 </p>
               </div>
               <div className='flex mt-6 gap-4'>
-                {socialLinks.map((item) => (
+                {SocialLinks.map((item) => (
                   <a
                     key={item.name}
                     href={item?.href}
@@ -86,7 +45,7 @@ const Footer = () => {
             <div className='col-span-2'>
               <h4 className='text-base font-roboto font-bold pb-3'>Navigation links</h4>
               <ul className='mt-3'>
-                {usefulLinks.map((link) => (
+                {UsefulLinks.map((link) => (
                   <li key={link.name} className='pb-2.5'>
                     <Link className='text-sm text-white/75 hover:text-[var(--accent)] transition-all duration-300' href={link.href}>
                       {link.name}
@@ -112,7 +71,7 @@ const Footer = () => {
             <div className='col-span-2'>
               <h4 className='text-base font-roboto font-bold pb-3'>Company</h4>
               <ul className='mt-3'>
-                {company.map((item) => (
+                {Company.map((item) => (
                   <li key={item.name} className='pb-2.5'>
                     <Link className='text-sm text-white/75 hover:text-[var(--accent)] transition-all duration-300' href={item.href}>
                       {item.name}
