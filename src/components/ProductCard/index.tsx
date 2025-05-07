@@ -6,12 +6,11 @@ interface ProductCardProps {
   title: string;
   image: string;
   showShadow?: boolean;
-  type?: string;
 }
 
-const ProductCard = ({ name, title, image, showShadow = false, type }: ProductCardProps) => {
+const ProductCard = ({ name, title, image, showShadow = false }: ProductCardProps) => {
   return (
-    <Link href={`/products/detail/${type}/${name}`} className='h-full col-span-1 '>
+    <Link href={`/product/${name}`} className='h-full col-span-1 '>
       <div className={`flex flex-col group ${showShadow ? 'shadow-lg' : ''} rounded-lg overflow-hidden h-full`}>
         <div className='overflow-hidden border-b-2 border-[var(--accent)]'>
           <div className='bg-white group-hover:scale-110 w-full h-auto transition-all duration-300 aspect-square flex items-center justify-center'>

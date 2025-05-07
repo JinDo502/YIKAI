@@ -5,7 +5,7 @@ import Link from 'next/link';
 interface InfoProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   data: any;
-  categories: string;
+  categories: string[];
 }
 
 const ProductInformation = (props: InfoProps) => {
@@ -26,7 +26,7 @@ const ProductInformation = (props: InfoProps) => {
         <div className='space-y-5'>
           <EnterAnimate type='slideUp' delay={0.5} className='text-[var(--heading)]'>
             <div className='font-blod opacity-50'>Categories:</div>
-            <div className='font-blod'>{categories}</div>
+            <div className='font-blod'>{categories.join(' ')}</div>
           </EnterAnimate>
           {keys?.map((key, index) => {
             const item = data[key];

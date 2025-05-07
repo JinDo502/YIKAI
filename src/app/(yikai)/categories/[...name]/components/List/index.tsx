@@ -3,19 +3,25 @@ import ProductCard from '@/components/ProductCard';
 import productsMap from '@/public/ProductsConstant';
 
 interface ListProps {
-  selectType: string;
+  path: string[];
 }
 
-type productType = keyof typeof productsMap;
+const List = ({ path }: ListProps) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const products: any[] = [];
 
-const List = ({ selectType }: ListProps) => {
-  const type = productsMap[selectType as productType];
+  productsMap?.forEach((item) => {
+    if (item.name.join(' ') === path.join(' ')) {
+      products.push(...item.products);
+    }
+  });
+
   return (
     <div className='flex-1'>
       <div className='flex flex-col gap-4 grid grid-cols-2 md:grid-cols-3'>
-        {type.map((item) => (
+        {products.map((item) => (
           <EnterAnimate type='slideUp' key={item.model}>
-            <ProductCard name={item?.name} type={selectType} key={item.model} title={item.model} image={item.images.main[0]} showShadow={true} />
+            <ProductCard name={item.name} key={item.model} title={item.model} image={item.images.main[0]} showShadow={true} />
           </EnterAnimate>
         ))}
       </div>

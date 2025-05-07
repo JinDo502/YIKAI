@@ -5,19 +5,19 @@ import tentsukiHoist from './Tentsuki Hoist';
 import SpecialHydraulicProducts from './Accessory Part';
 import CustomMade from './Custom-made';
 
-const productsMap = {
-  'Hydraulic Gear Pump': {
-    name: 'Hydraulic Gear Pump',
-    products: [],
-    children: [
-      { name: 'Parker', products: parkerHydraulicGearPump },
-      { name: 'KP', products: kpHydraulicGearPump },
-    ],
-  },
-  PTO: { name: 'PTO', products: pto, children: [] },
-  'Tentsuki Hoist': { name: 'Tentsuki Hoist', products: tentsukiHoist, children: [] },
-  'Accessory Part': { name: 'Accessory Part', products: SpecialHydraulicProducts, children: [] },
-  'Custom-made': { name: 'Custom-made', products: CustomMade, children: [] },
-};
+interface ProductMap {
+  name: string[];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  products: any[];
+}
+
+const productsMap: ProductMap[] = [
+  { name: ['Hydraulic Gear Pump', 'Parker'], products: parkerHydraulicGearPump },
+  { name: ['Hydraulic Gear Pump', 'KP'], products: kpHydraulicGearPump },
+  { name: ['PTO'], products: pto },
+  { name: ['Tentsuki Hoist'], products: tentsukiHoist },
+  { name: ['Accessory Part'], products: SpecialHydraulicProducts },
+  { name: ['Custom-made'], products: CustomMade },
+];
 
 export default productsMap;

@@ -34,7 +34,7 @@ const ProductSwiperContent = () => {
                     <Image src={product.image} alt={product.name} className='object-contain w-full h-full' width={400} height={400} sizes='(max-width: 768px) 100vw, 25vw' />
                   </div>
                   <div className='opacity-0 group-hover:opacity-100 transition-all duration-300 absolute inset-0 bg-black/50 flex flex-col justify-end p-4'>
-                    <h3 className='text-center m-auto text-[var(--accent)] text-2xl font-bold'>{product.name}</h3>
+                    <h3 className='text-center m-auto text-[var(--accent)] text-2xl font-bold'>{product.type?.join(' ')}</h3>
                   </div>
                 </div>
               </Link>

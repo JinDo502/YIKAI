@@ -7,7 +7,7 @@ const TopSellingHydraulicSolutionsContent = () => {
   return (
     <EnterAnimate type='slideUp' className='grid grid-cols-2 md:grid-cols-4 gap-4'>
       {topSellingHydraulicSolutions.map((item) => (
-        <ProductCard type={item.type} name={item?.name} key={item.name} title={item.model} image={item.image} />
+        <ProductCard name={item?.name} key={item.name} title={item.model} image={item.image} />
       ))}
     </EnterAnimate>
   );

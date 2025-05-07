@@ -4,34 +4,44 @@ import List from './components/List';
 import PageBanner from '@/components/PageBanner';
 
 export async function generateStaticParams() {
-  return ProductMenu.map((item) => ({ name: item.name }));
+  const params: { name: string[] }[] = [];
+
+  ProductMenu?.forEach((item) => {
+    if (item.children) {
+      item.children.forEach((child) => params.push({ name: [item.name, child.name] }));
+    } else {
+      params.push({ name: [item.name] });
+    }
+  });
+
+  return params;
 }
 
 interface ProductProps {
-  params: Promise<{ name: string }>;
+  params: Promise<{ name: string[] }>;
 }
 
 export async function generateMetadata({ params }: ProductProps) {
   const { name } = await params;
-  const selectType = decodeURIComponent(name);
+  const pathDecode = name.map((item) => decodeURIComponent(item));
   return {
-    title: `YIKAI-${selectType}`,
-    description: `YIKAI-${selectType}`,
+    title: `YIKAI-${pathDecode.join(' ')}`,
+    description: `YIKAI-${pathDecode.join(' ')}`,
   };
 }
 
 const Product = async ({ params }: ProductProps) => {
   const { name } = await params;
   // url解码
-  const selectType = decodeURIComponent(name);
+  const path = name.map((item) => decodeURIComponent(item));
 
   return (
     <div className='bg-white'>
       <PageBanner src='/images/product/header.jpg' alt='Products' title='Products' />
       <div className='max-w-7xl mx-auto py-5 md:py-15 flex flex-col md:flex-row gap-4 md:gap-10 px-4 md:px-0'>
-        <Menu selected={selectType} />
+        <Menu path={path} />
 
-        <List selectType={selectType} />
+        <List path={path} />
       </div>
     </div>
   );

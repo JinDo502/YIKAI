@@ -3,7 +3,7 @@ import { Company, ProductMenu, SocialLinks, UsefulLinks } from '@/common/menu';
 
 const ourProduct = ProductMenu.map((item) => ({
   name: item.name,
-  href: `/products/${item.name}`,
+  href: `/fullPath/${item.name}`,
 }));
 
 const Footer = () => {

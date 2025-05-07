@@ -1,7 +1,7 @@
 export const UsefulLinks = [
   { name: 'Home', href: '/home', path: 'home' },
   { name: 'About us', href: '/about', path: 'about' },
-  { name: 'Product', href: '/products', path: 'products' },
+  { name: 'Products', href: '/categories', path: 'categories' },
   { name: 'Contact', href: '/contact', path: 'contact' },
 ];
 
@@ -18,4 +18,10 @@ export const SocialLinks = [
   { name: 'Linkedin', icon: 'bi-linkedin' },
 ];
 
-export const ProductMenu = [{ name: 'PTO' }, { name: 'Tentsuki Hoist' }, { name: 'Hydraulic Gear Pump/KP' }, { name: 'Parker Hydraulic Gear Pump' }, { name: 'Accessory Part' }];
+export const ProductMenu = [
+  { name: 'PTO' },
+  { name: 'Custom-made' },
+  { name: 'Tentsuki Hoist' },
+  { name: 'Accessory Part' },
+  { name: 'Hydraulic Gear Pump', children: [{ name: 'KP' }, { name: 'Parker' }] },
+];
