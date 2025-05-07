@@ -2,12 +2,21 @@ import productsMap from '@/public/ProductsConstant';
 
 const name = ['KRM201', 'KP1505A', 'C102', 'H-LIFT'];
 
-const allProducts = [
-  ...productsMap['Parker Hydraulic Gear Pump']?.map((product) => ({ ...product, type: 'Parker Hydraulic Gear Pump' })),
-  ...productsMap['KP Hydraulic Gear Pump']?.map((product) => ({ ...product, type: 'KP Hydraulic Gear Pump' })),
-  ...productsMap['Tentsuki Hoist']?.map((product) => ({ ...product, type: 'Tentsuki Hoist' })),
-  ...productsMap['Special Hydraulic Products']?.map((product) => ({ ...product, type: 'Special Hydraulic Products' })),
-];
+type ProductType = keyof typeof productsMap;
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const allProducts: any[] = [];
+
+Object.keys(productsMap)?.forEach((type) => {
+  const productMapItem = productsMap[type as ProductType];
+  if (productMapItem.children.length > 0) {
+    productMapItem.children.forEach((child) => {
+      allProducts.push(...child.products);
+    });
+  } else {
+    allProducts.push(...productMapItem.products);
+  }
+});
 
 const topSellingHydraulicSolutions = allProducts
   .filter((product) => name.includes(product.name))

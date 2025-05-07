@@ -3,20 +3,20 @@ const H_LIFT = {
   name: 'H-LIFT',
   images: {
     main: [
-      '/ProductsConstant/Tentsuki Hoist/H-LIFT/H-LIFT-a.png',
-      '/ProductsConstant/Tentsuki Hoist/H-LIFT/H-LIFT-b.png',
-      '/ProductsConstant/Tentsuki Hoist/H-LIFT/H-LIFT-c.png',
-      '/ProductsConstant/Tentsuki Hoist/H-LIFT/H-LIFT-d.png',
+      '/ProductsConstant/Custom-made/H-LIFT/H-LIFT-a.png',
+      '/ProductsConstant/Custom-made/H-LIFT/H-LIFT-b.png',
+      '/ProductsConstant/Custom-made/H-LIFT/H-LIFT-c.png',
+      '/ProductsConstant/Custom-made/H-LIFT/H-LIFT-d.png',
     ],
     secondary: [
-      '/ProductsConstant/Tentsuki Hoist/H-LIFT/secondary1.png',
-      '/ProductsConstant/Tentsuki Hoist/H-LIFT/secondary2.png',
-      '/ProductsConstant/Tentsuki Hoist/H-LIFT/secondary3.png',
-      '/ProductsConstant/Tentsuki Hoist/H-LIFT/secondary4.png',
-      '/ProductsConstant/Tentsuki Hoist/H-LIFT/secondary5.png',
-      '/ProductsConstant/Tentsuki Hoist/H-LIFT/secondary6.png',
+      '/ProductsConstant/Custom-made/H-LIFT/secondary1.png',
+      '/ProductsConstant/Custom-made/H-LIFT/secondary2.png',
+      '/ProductsConstant/Custom-made/H-LIFT/secondary3.png',
+      '/ProductsConstant/Custom-made/H-LIFT/secondary4.png',
+      '/ProductsConstant/Custom-made/H-LIFT/secondary5.png',
+      '/ProductsConstant/Custom-made/H-LIFT/secondary6.png',
     ],
-    information: ['/ProductsConstant/Tentsuki Hoist/H-LIFT/information1.png'],
+    information: ['/ProductsConstant/Custom-made/H-LIFT/information1.png'],
   },
 };
 

@@ -59,7 +59,14 @@ const EfficiencyMeetsPerformance = () => {
       content={<EfficiencyMeetsPerformanceContent />}
       leftContent={
         <EnterAnimate type='scale' className='relative w-full h-full'>
-          <Image src='/images/efficiency-meets-performance.gif' alt='Efficiency Meets Performance' fill className='object-cover' sizes='(max-width: 768px) 100vw, 50vw' />
+          <Image
+            src='/images/efficiency-meets-performance.gif'
+            alt='Efficiency Meets Performance'
+            fill
+            className='object-cover'
+            sizes='(max-width: 768px) 100vw, 50vw'
+            unoptimized
+          />
         </EnterAnimate>
       }
     />

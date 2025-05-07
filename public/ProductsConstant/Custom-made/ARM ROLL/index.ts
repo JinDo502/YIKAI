@@ -3,16 +3,16 @@ const ARM_ROLL = {
   name: 'ARM ROLL',
   images: {
     main: [
-      '/ProductsConstant/Tentsuki Hoist/ARM ROLL/ARM ROLL-a.png',
-      '/ProductsConstant/Tentsuki Hoist/ARM ROLL/ARM ROLL-b.png',
-      '/ProductsConstant/Tentsuki Hoist/ARM ROLL/ARM ROLL-c.png',
+      '/ProductsConstant/Custom-made/ARM ROLL/ARM ROLL-a.png',
+      '/ProductsConstant/Custom-made/ARM ROLL/ARM ROLL-b.png',
+      '/ProductsConstant/Custom-made/ARM ROLL/ARM ROLL-c.png',
     ],
     secondary: [
-      '/ProductsConstant/Tentsuki Hoist/ARM ROLL/secondary1.png',
-      '/ProductsConstant/Tentsuki Hoist/ARM ROLL/secondary2.png',
-      '/ProductsConstant/Tentsuki Hoist/ARM ROLL/secondary3.png',
+      '/ProductsConstant/Custom-made/ARM ROLL/secondary1.png',
+      '/ProductsConstant/Custom-made/ARM ROLL/secondary2.png',
+      '/ProductsConstant/Custom-made/ARM ROLL/secondary3.png',
     ],
-    information: ['/ProductsConstant/Tentsuki Hoist/ARM ROLL/information1.png'],
+    information: ['/ProductsConstant/Custom-made/ARM ROLL/information1.png'],
   },
 };
 

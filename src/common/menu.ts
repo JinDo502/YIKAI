@@ -18,10 +18,4 @@ export const SocialLinks = [
   { name: 'Linkedin', icon: 'bi-linkedin' },
 ];
 
-export const ProductMenu = [
-  { name: 'PTO' },
-  { name: 'Tentsuki Hoist' },
-  { name: 'KP Hydraulic Gear Pump' },
-  { name: 'Parker Hydraulic Gear Pump' },
-  { name: 'Special Hydraulic Products' },
-];
+export const ProductMenu = [{ name: 'PTO' }, { name: 'Tentsuki Hoist' }, { name: 'Hydraulic Gear Pump/KP' }, { name: 'Parker Hydraulic Gear Pump' }, { name: 'Accessory Part' }];
