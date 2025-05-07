@@ -19,7 +19,7 @@ const Footer = () => {
 
               <div className='text-sm mt-3'>
                 <p className='mb-1'>Tel&Whatsapp ：+86 13906503693</p>
-                <p className='mb-1'>Email ：newright_hpp@163.com</p>
+                <p className='mb-1'>Email ：WYC@ZHEJIANGYIKAI.COM</p>
                 <p className='mt-3 mb-1'>
                   <strong>Office address:</strong> <span>No.5 Xingxing Road,Lin ping District,Hangzhou City,Zhejiang Province,China</span>
                 </p>

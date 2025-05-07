@@ -14,7 +14,7 @@ const Info = () => {
             Email Us
           </EnterAnimate>
           <EnterAnimate type='slideUp' className='text-sm text-[var(--heading)]'>
-            newright_hpp@163.com
+            WYC@ZHEJIANGYIKAI.COM
           </EnterAnimate>
         </div>
 
