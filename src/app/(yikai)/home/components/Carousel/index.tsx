@@ -105,9 +105,9 @@ const Carousel = ({ interval = 5000 }: CarouselProps) => {
 
       {/* 轮播图上方的内容 */}
       <div className='relative md:max-w-7xl m-auto min-h-screen flex flex-col items-center'>
-        <div className='flex flex-col items-center m-auto w-[60%] pt-[110px] pb-[60px] px-0 md:px-12 text-center text-white'>
+        <div className='flex flex-col items-center m-auto w-[80%] pt-[110px] pb-[60px] px-0 md:px-12 text-center text-white'>
           <h2 className='relative mb-8 pb-8 text-4xl md:text-6xl font-bold after:content-[""] after:block after:w-[80px] after:h-[4px] after:bg-[var(--accent)] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2'>
-            Welcome to <br /> YIKAI
+            Welcome to YIKAI
           </h2>
           <p className='md:text-xl opacity-80 font-default'>EXPORT DELIVERS PREMIUM HYDRAULIC SYSTEMS FOR CONSTRUCTION MACHINERY</p>
           <Link href='/about'>

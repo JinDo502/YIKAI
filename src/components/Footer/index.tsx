@@ -1,10 +1,23 @@
 import Link from 'next/link';
 import { Company, ProductMenu, SocialLinks, UsefulLinks } from '@/common/menu';
 
-const ourProduct = ProductMenu.map((item) => ({
-  name: item.name,
-  href: `/fullPath/${item.name}`,
-}));
+const ourProduct: { name: string; href: string }[] = [];
+
+ProductMenu.forEach((item) => {
+  if (item.children) {
+    item.children.forEach((child) => {
+      ourProduct.push({
+        name: `${item.name} - ${child.name}`,
+        href: `/categories/${item.name}/${child.name}`,
+      });
+    });
+  } else {
+    ourProduct.push({
+      name: item.name,
+      href: `/categories/${item.name}`,
+    });
+  }
+});
 
 const Footer = () => {
   return (
