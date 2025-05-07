@@ -42,7 +42,7 @@ const Header = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed w-screen top-0 z-30 px-4 md:px-0 transition-colors duration-300 ${scrollBg ? 'bg-white/95' : 'bg-transparent'}`}
+      className={`fixed w-screen top-0 z-30 px-4 md:px-0 transition-colors duration-300 ${scrollBg ? 'bg-white/95 shadow-sm' : 'bg-transparent'}`}
     >
       <div className='flex items-center justify-between py-5 m-auto md:max-w-7xl'>
         <motion.div whileHover={{ scale: 1.05 }} className='flex items-center text-2xl font-roboto font-[700]'>

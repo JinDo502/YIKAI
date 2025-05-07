@@ -31,13 +31,17 @@ const Footer = () => {
               </Link>
 
               <div className='text-sm mt-3'>
-                <p className='mb-1'>Tel&Whatsapp ：+86 13906503693</p>
-                <p className='mb-1'>Email ：WYC@ZHEJIANGYIKAI.COM</p>
-                <p className='mt-3 mb-1'>
-                  <strong>Office address:</strong> <span>No.5 Xingxing Road,Lin ping District,Hangzhou City,Zhejiang Province,China</span>
+                <p className='mb-1'>
+                  <strong>Tel&Whatsapp :</strong> <span>+86 13906503693</span>
                 </p>
                 <p className='mb-1'>
-                  <strong>Factory address:</strong> <span>Hongqiao Industry ,Huzhou City, Zhejiang Province,China</span>
+                  <strong>Email :</strong> <span>WYC@ZHEJIANGYIKAI.COM</span>
+                </p>
+                <p className='mt-3 mb-1'>
+                  <strong>Office address :</strong> <span>No.5 Xingxing Road, Lin ping District, Hangzhou City, Zhejiang Province, China</span>
+                </p>
+                <p className='mb-1'>
+                  <strong>Factory address :</strong> <span>Hongqiao Industry, Huzhou City, Zhejiang Province, China</span>
                 </p>
               </div>
               <div className='flex mt-4 md:mt-6 gap-4 '>
