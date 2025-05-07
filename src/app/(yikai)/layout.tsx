@@ -3,7 +3,7 @@ import Footer from '@/components/Footer';
 
 const Layout = async ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className='w-screen'>
+    <div className='w-screen overflow-x-hidden'>
       <Header />
       <main className='bg-white min-h-screen'>{children}</main>
       <Footer />

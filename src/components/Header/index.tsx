@@ -46,7 +46,7 @@ const Header = () => {
     >
       <div className='flex items-center justify-between py-5 m-auto md:max-w-7xl'>
         <motion.div whileHover={{ scale: 1.05 }} className='flex items-center text-2xl font-roboto font-[700]'>
-          <Image src={logo} width={32} height={32} alt='logo' />
+          <Image src={logo} width={32} height={32} alt='logo' priority />
           <div className={`ml-2 text-2xl font-roboto whitespace-nowrap ${scrollBg ? 'text-black' : 'text-white'}`}>YIKAI</div>
           <span className='text-[#feb900]'>.</span>
         </motion.div>

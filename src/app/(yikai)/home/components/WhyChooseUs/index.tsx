@@ -36,7 +36,7 @@ const WhyChooseUsContent = () => {
         <div className='flex gap-4 md:gap-8'>
           {circleImages.map((image, index) => (
             <div className='h-8 w-8 relative rounded-full overflow-hidden shadow-[0_4px_6px_rgba(0,0,0,0.1)]' key={image}>
-              <Image src={image} alt={`Image ${index + 1}`} fill style={{ objectFit: 'contain' }} />
+              <Image src={image} alt={`Image ${index + 1}`} fill style={{ objectFit: 'contain' }} sizes='(max-width: 768px) 100vw, 50vw' unoptimized />
             </div>
           ))}
         </div>
@@ -54,7 +54,7 @@ const WhyChooseUs = () => {
       content={<WhyChooseUsContent />}
       rightContent={
         <EnterAnimate type='slideLeft' className='px-4 md:px-0'>
-          <Image src='/images/why-us/why-us.png' alt='Why Businesses Choose Us' width={800} height={600} />
+          <Image src='/images/why-us/why-us.png' priority alt='Why Businesses Choose Us' width={800} height={600} />
         </EnterAnimate>
       }
     />
