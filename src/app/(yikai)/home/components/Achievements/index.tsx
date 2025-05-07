@@ -7,7 +7,7 @@ const Card = (props: { title: string; value: number; icon: string }) => {
     <div className='p-8 bg-white shadow-[0px_0px_30px_rgba(0,0,0,0.1)] flex items-center group'>
       <i className={`${icon} flex-shrink-0 text-5xl text-[var(--accent)] mr-4 group-hover:scale-110 transition-all duration-300`} />
       <div className='gap-2 flex flex-col'>
-        <AnimateNumber value={value} className='text-4xl font-bold text-[var(--heading)]' />
+        <AnimateNumber value={value} delay={0.5} triggerOnView className='text-4xl font-bold text-[var(--heading)]' />
         <h3 className='text-base'>{title}</h3>
       </div>
     </div>
