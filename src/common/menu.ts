@@ -19,9 +19,9 @@ export const SocialLinks = [
 ];
 
 export const ProductMenu = [
-  { name: 'PTO' },
-  { name: 'Custom-made' },
   { name: 'Tentsuki Hoist' },
-  { name: 'Accessory Part' },
+  { name: 'Custom-made' },
   { name: 'Hydraulic Gear Pump', children: [{ name: 'KP' }, { name: 'Parker' }] },
+  { name: 'PTO' },
+  { name: 'Accessory Part' },
 ];
